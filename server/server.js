@@ -1,6 +1,6 @@
 const express = require("express");
 const ScrapeContent = require("./scripts/scrapefromweb");
-const summarizeContent = require("./scripts/geminiApi"); // Import summarizeContent function
+const summarizeContent = require("./scripts/geminiApi");
 
 const app = express();
 const port = 3000;
@@ -21,7 +21,6 @@ app.get("/scrape", async (req, res) => {
   console.log(`\n🔍 Scraping content for: ${keyword}`);
 
   try {
-    // Step 1: Scrape the content
     const content = await ScrapeContent(keyword);
     console.log("\n📝 Extracted Content:\n", content);
 
@@ -29,12 +28,10 @@ app.get("/scrape", async (req, res) => {
       return res.status(500).json({ error: "Failed to fetch content." });
     }
 
-    // Step 2: Summarize the scraped content
     console.log("\n⏳ Summarizing content...");
     const summary = await summarizeContent(content);
     console.log("\n✅ Summary Generated:\n", summary);
 
-    // Step 3: Send response
     res.json({ keyword, summary });
   } catch (error) {
     console.error("Error processing request:", error);
