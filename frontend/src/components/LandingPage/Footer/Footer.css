@@ -1,0 +1,117 @@
+.footer {
+    padding: 6rem 10rem; /* slightly increased padding */
+    background-color: #fff;
+    color: #111;
+    font-family: 'Arial', sans-serif;
+    min-height: 550px;
+    box-sizing: border-box;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem; /* increased gap */
+    margin-bottom: 3rem; /* more breathing room */
+  }
+  
+  .footer-section {
+    flex: 1 1 240px; /* more base width */
+  }
+  
+  .brand h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .highlight {
+    font-family: 'RomanBT',sans-serif;
+  }
+  .brand .highlight {
+    color: #ff4d4d;
+    font-weight: bold;
+  }
+  
+  .brand p {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links li {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+    cursor: pointer;
+  }
+  
+  .links li:hover {
+    text-decoration: underline;
+  }
+  
+  .contact p {
+    margin: 0.7rem 0;
+    font-size: 1.05rem;
+  }
+  
+  .contact a {
+    color: #000;
+    font-size: 1.05rem;
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .icon:hover {
+    background-color: #111;
+    color: white;
+  }
+  
+  hr {
+    border: 0.5px solid #ddd;
+    margin: 2.5rem 0 1.5rem;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .footer-bottom .link {
+    color: #ff4d4d;
+    cursor: pointer;
+  }
+  
+  .footer-policy {
+    display: flex;
+    gap: 2.5rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  

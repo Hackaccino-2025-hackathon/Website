@@ -64,21 +64,45 @@
   
   .circle-button {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    width: 100px;
-    height: 100px;
+    bottom: 14rem;
+    right: 12rem;
+    width: 150px; /* ⬆️ Increased size */
+    height: 150px;
     border: 2px solid #111;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2rem; /* ⬆️ Larger font */
     z-index: 2;
     background: transparent;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    animation: popIn 1s ease-out;
   }
+  
+  /* 🔁 Keyframe animation */
+  @keyframes popIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* 🔄 Optional Hover Effect */
+  .circle-button:hover {
+    background-color: #111;
+    color: white;
+    transform: scale(1.05);
+  }
+  
   
   .circle-button:hover {
     background: rgba(0, 0, 0, 0.1);

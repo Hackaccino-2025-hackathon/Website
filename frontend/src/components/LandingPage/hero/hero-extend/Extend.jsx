@@ -36,7 +36,7 @@ const Extend = () => {
         </p>
       </div>
       <div className="circle-button">
-        <span>.</span>
+        <span style={{fontSize:'6rem'}}>&#8595;</span> {/* Downward arrow ↓ */}
       </div>
 
       {/* Use your PNG as a background via CSS */}
