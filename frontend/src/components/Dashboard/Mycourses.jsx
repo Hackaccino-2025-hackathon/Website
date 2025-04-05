@@ -3,8 +3,8 @@ import React from "react";
 const Mycourses = () => {
   return (
     <>
-      <div className="flex flex-col gap-[20px] mt-[40px] w-full">
-        <div className="flex justify-start items-center content-center flex-wrap gap-[28spx] ">
+      <div className="flex flex-col gap-[20px] mt-[7px] w-full">
+        <div className="flex justify-start items-center content-center gap-[25px] flex-wrap ">
           <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[200px] p-3 ">
             <h3 className="font-bold mb-[20px]">
               Deep Learning and architecture

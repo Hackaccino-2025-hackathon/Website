@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
 const ScrapeContent = require("./scripts/scrapefromweb");
@@ -6,6 +7,8 @@ const summarizeContent = require("./scripts/geminiApi");
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -85,6 +88,8 @@ app.post("/summarize-course", async (req, res) => {
           const content = await ScrapeContent(topicName);
           if (!content) throw new Error("Scrape failed");
 
+          console.log("test", content);
+
           const summary = await summarizeContent(content);
 
           const safeTopicName = topicName
@@ -92,12 +97,12 @@ app.post("/summarize-course", async (req, res) => {
             .toLowerCase();
           const outputDir = path.join(
             __dirname,
-            "..", // go up one level from server/
+            "..",
             "Global Storage",
             "course_content",
             safeCourseName,
             `chapter${chapterNum}`,
-            `topic${topicNum}`
+            safeTopicName
           );
 
           fs.mkdirSync(outputDir, { recursive: true });

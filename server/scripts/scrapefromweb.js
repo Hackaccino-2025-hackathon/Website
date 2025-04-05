@@ -27,7 +27,8 @@ async function searchTopLinks(keyword) {
             !href.includes("course") &&
             !href.includes("skillshare") &&
             !href.includes("khanacademy") &&
-            !href.includes("freshworks")
+            !href.includes("freshworks") &&
+            !href.includes("mitsloan")
         )
         .slice(0, 1);
     });

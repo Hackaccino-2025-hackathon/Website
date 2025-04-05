@@ -16,7 +16,7 @@ const MainDashboard = () => {
       <h1 className="font-semibold text-3xl">Welcome Bhagwan</h1>
       <div className="flex flex-col gap-[20px] mt-[40px]">
         <div className="flex gap-[5px] flex-wrap justify-evenly items-center content-center ">
-          <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-5 ">
+          <div className="w-[28%] border-gray-400 border-1 rounded-2xl h-[157px] p-5 ">
             <div className="flex flex-col justify-between h-full">
               <div className="flex flex-row gap-[10px]">
                 <div className="bg-[#317b74] w-[22%] border-green-100 border-[3px] flex justify-center items-center ">
@@ -58,7 +58,7 @@ const MainDashboard = () => {
               </div>
             </div>
           </div>
-          <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
+          <div className="w-[28%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
             <div className="flex flex-col justify-between h-full">
               <div className="flex flex-row gap-[10px]">
                 <div className="bg-[#8fffa4] w-[22%] border-green-100 border-[3px] flex justify-center items-center ">
@@ -100,7 +100,7 @@ const MainDashboard = () => {
               </div>
             </div>
           </div>
-          <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
+          <div className="w-[28%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
             <div className="flex flex-col justify-between h-full">
               <div className="flex flex-row gap-[10px]">
                 <div className="bg-[#ff9e00] w-[22%] border-yellow-100 border-[3px] flex justify-center items-center ">
@@ -145,7 +145,7 @@ const MainDashboard = () => {
       <br />
       <div>
         <div className="graphs-section flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div className="w-[48%] border-gray-400 border-1 rounded-2xl h-[240px] p-3 flex justify-center items-center">
+          <div className="w-[45%] border-gray-400 border-1 rounded-2xl h-[240px] p-3 flex justify-center items-center">
             <LineChart
               width={450}
               height={250}
@@ -194,7 +194,7 @@ const MainDashboard = () => {
               }}
             />
           </div>
-          <div className="w-[48%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
+          <div className="w-[45%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
             <h1 className="font-semibold text-2xl mb-[20px]">Lessons</h1>
             <div className="bg-[#fef0f0] rounded-2xl px-[50px] ">
               <div className="flex flex-row py-[10px] gap-4 justify-between items-center">
@@ -306,7 +306,7 @@ const MainDashboard = () => {
       <br />
       <div>
         <div className="flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div className="w-[98%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
+          <div className="w-[92%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
             2
           </div>
         </div>
