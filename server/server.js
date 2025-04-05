@@ -92,6 +92,8 @@ app.post("/summarize-course", async (req, res) => {
             .toLowerCase();
           const outputDir = path.join(
             __dirname,
+            "..", // go up one level from server/
+            "Global Storage",
             "course_content",
             safeCourseName,
             `chapter${chapterNum}`,
