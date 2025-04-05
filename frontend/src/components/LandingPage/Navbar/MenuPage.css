@@ -2,18 +2,28 @@
 .menu-container {
     width: 100vw;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    perspective: 1000px; /* Enables 3D effects if needed */
+    transform-style: preserve-3d;
+}
+
+/* Animated background image element */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('/banner_img.png') no-repeat center center;
     background-size: cover;  /* Ensures the image covers the whole screen */
     background-position: center;
     background-attachment: fixed; /* Keeps the image in place while scrolling */
-    position: relative;
-    overflow: hidden;
-    perspective: 1000px; /* Enables 3D flipping */
-    transform-style: preserve-3d;
+    z-index: -1; /* Place behind the menu content */
 }
 
 /* Close button */
@@ -37,40 +47,53 @@
     transform: scale(1.1);
 }
 
-/* Menu content */
 .menu-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px;
-    border-radius: 20px;
-}
+    align-items: center;    /* center each item */
+    gap: 0.8rem;            /* small gap between lines */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu-content h1 {
 
-/* Menu headings */
-.menu-content h1 {
-    font-size: 4rem;
-    font-weight: 1200;
+    width: max-content;     /* shrink-wrap to text */
+    font-family: "Montserrat-semibold", sans-serif;
+    font-size: 4.3rem;
+    font-weight: 900;
+    margin-top:10px;
+    line-height: 1;
+    margin: 0;
+    padding: 0.1rem 0;
     text-transform: uppercase;
-    margin: 10px 0;
-    color: black; /* Adjusted for contrast */
-    transition: color 0.3s ease-in-out, transform 0.2s ease;
-}
-
-.menu-content h1:hover {
-    color: azure;
-    cursor: pointer;
-    transform: scale(1.05);
-}
+    color: #000;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-align: center;     /* center text inside its own box */
+  }
+  
+  
+  /* Example hover effect */
+  .menu-content h1:hover {
+    color: White;
+    font-weight: 700;
+    cursor:pointer;
+    transform: translateX(5px);
+  }
 
 /* Contact button */
 .contact-button {
     background: white;
-    font-size: 20px;
+    font-size: 45px;
     font-weight: bold;
-    padding: 25px 40px;
+    padding: 15px 45px;
     border: none;
-    border-radius: 30px;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+
+    border-radius: 75px;
     cursor: pointer;
     transition: transform 0.1s ease-in-out, background 0.1s;
 }
