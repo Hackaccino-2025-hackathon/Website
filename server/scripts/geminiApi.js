@@ -4,7 +4,7 @@ const path = require("path");
 
 dotenv.config();
 
-const GEMINI_API_KEY = "AIzaSyCaflwoMklUmnTvOyb2EEu0mZKnxxF8mjs";
+const GEMINI_API_KEY = "AIzaSyCMhDVqvC_i9ITCXm1WjTIpmcODDaNTCUI";
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 const summarizeContent = async (textContent) => {
@@ -20,7 +20,9 @@ your task is to remove that data and then summarize the data in the following fo
 there should be headdings in <h1/> the paragarphs should b in <p/>tags and write the necessary code with tailwind for the code snippets. additionally you can use <li/> and <ul/> tags where ever necessary
 Summarize the following content in a clear and concise manner. 
 Make sure to preserve key points and important details:
-Explain each and every topic in a very consise and clear manner. dive deep into each topic and write near 200 words
+Explain each and every topic in a very consise and clear manner. dive deep into each topic and write near 4000-5000 words of content.
+
+NOTE - if the textcontent is ""Failed to generate summary"" then generate the summary accordingly and do not use the textcontent in the summary.
 
 ${textContent}
 

@@ -1,0 +1,144 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training, Validation, and Testing Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <h1 class="text-3xl font-bold mb-4">Understanding Data Splitting: Training, Validation, and Testing Sets</h1>
+
+    <p class="mb-4">In machine learning, it's crucial to evaluate the performance of a model on unseen data to ensure it generalizes well to real-world scenarios. This is achieved by splitting the available data into three distinct sets: training, validation, and testing.  Each set plays a vital role in the model development process.</p>
+
+    <h1 class="text-2xl font-bold mb-2 mt-6">1. Training Set</h1>
+
+    <p class="mb-4">The training set is the largest portion of the dataset, typically comprising around 70-80% of the total data. It's used to train the machine learning model.  The model learns the underlying patterns and relationships within the data by adjusting its internal parameters to minimize the difference between its predictions and the actual target values in the training set.</p>
+
+    <p class="mb-4">Think of it like teaching a student using textbooks and practice exercises. The student learns the concepts and techniques from the training materials. The more diverse and representative the training set, the better the model can learn.</p>
+
+    <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+        <pre class="language-python rounded-md">
+            <code class="text-sm font-mono">
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+# Create a dummy dataset
+X = np.random.rand(100, 5)  # 100 samples, 5 features
+y = np.random.randint(0, 2, 100) # 100 target values (binary classification)
+
+# Split into training and testing sets (80/20 split)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+print("X_train shape:", X_train.shape)
+print("y_train shape:", y_train.shape)
+            </code>
+        </pre>
+    </div>
+
+    <h1 class="text-2xl font-bold mb-2 mt-6">2. Validation Set</h1>
+
+    <p class="mb-4">The validation set is used to fine-tune the model's hyperparameters and assess its performance during training. Hyperparameters are settings that control the learning process, such as the learning rate or the complexity of the model.  The validation set, typically around 10-15% of the data, allows us to experiment with different hyperparameter values and choose the ones that yield the best performance on this held-out set. </p>
+
+    <p class="mb-4">Continuing with the student analogy, the validation set is like a series of quizzes given throughout the course.  These quizzes help assess the student's understanding and allow them to adjust their learning strategies based on their performance.  It prevents the model from overfitting to the training data, where it performs well on the training set but poorly on new data.  Overfitting is like a student memorizing the textbook instead of understanding the underlying concepts.</p>
+
+
+    <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+        <pre class="language-python rounded-md">
+            <code class="text-sm font-mono">
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+# ... (X and y defined as before)
+
+# Split into training+validation and testing sets (80/20 split)
+X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Split training+validation into training and validation sets (75/25 split of the 80%)
+X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=0.25, random_state=42) 
+
+print("X_train shape:", X_train.shape)
+print("X_val shape:", X_val.shape)
+print("X_test shape:", X_test.shape)
+            </code>
+        </pre>
+    </div>
+
+
+    <h1 class="text-2xl font-bold mb-2 mt-6">3. Testing Set</h1>
+
+    <p class="mb-4">The testing set is the final evaluation set, typically around 10-15% of the data, used to evaluate the final model's performance after it has been trained and validated. It provides an unbiased estimate of how the model is likely to perform on completely unseen data in the real world. The testing set should only be used once, at the very end of the model development process. Repeatedly evaluating the model on the testing set can lead to overfitting to the testing data.</p>
+
+    <p class="mb-4">In the student analogy, the testing set is like the final exam. It assesses the student's overall understanding of the course material after all the learning and quizzes are completed.  It provides a final measure of the model's generalization ability.</p>
+
+
+
+<div class="bg-white p-4 rounded-lg shadow-md mb-4">
+    <pre class="language-python rounded-md">
+        <code class="text-sm font-mono">
+# ... (X_train, X_val, X_test, y_train, y_val, y_test defined as before)
+
+# Train your model on X_train and y_train
+
+# Evaluate on the validation set (X_val, y_val) and tune hyperparameters
+
+# Finally, evaluate the best model on the test set (X_test, y_test)
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_train,y_train)
+score = model.score(X_test,y_test) #score will be in between 0 to 1
+
+print("Score of test set:", score)
+        </code>
+    </pre>
+</div>
+
+
+
+
+<h1 class="text-2xl font-bold mb-2 mt-6">4. Cross-Validation: An Alternative to a Fixed Validation Set</h1>
+
+<p class="mb-4">Cross-validation is a technique where the training data is divided into multiple folds (subsets).  The model is trained on a combination of these folds and validated on the remaining fold.  This process is repeated multiple times, with each fold serving as the validation set once. Cross-validation provides a more robust estimate of model performance, especially when the dataset is small, as it utilizes more of the data for training in each iteration.</p>
+
+<div class="bg-white p-4 rounded-lg shadow-md mb-4">
+    <pre class="language-python rounded-md">
+        <code class="text-sm font-mono">
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression # for example
+
+# ... (X and y defined as in earlier examples)
+
+model = LogisticRegression()
+scores = cross_val_score(model, X, y, cv=5)  # 5-fold cross-validation
+
+print("Cross-validation scores:", scores)
+print("Average cross-validation score:", scores.mean())
+        </code>
+    </pre>
+</div>
+
+
+
+<h1 class="text-2xl font-bold mb-2 mt-6">5. Choosing the Right Splitting Strategy</h1>
+
+<p class="mb-4">The best splitting strategy depends on the size of your dataset. With large datasets, a simple train/validation/test split is usually sufficient. With smaller datasets, cross-validation might be more beneficial.  The proportions can also be adjusted based on the specific problem and dataset characteristics.</p>
+
+
+<h1 class="text-2xl font-bold mb-2 mt-6">6. Common Pitfalls to Avoid</h1>
+
+<ul class="list-disc pl-6 mb-4">
+    <li><strong>Data Leakage:</strong>  Ensure no information from the validation or test sets leaks into the training process.  This can lead to overly optimistic performance estimates.  Shuffle your data properly before splitting.</li>
+    <li><strong>Overfitting to the Validation Set:</strong> While the validation set helps tune hyperparameters, excessive tuning can lead to overfitting to this set.  Use the test set as the final arbiter of performance.</li>
+    <li><strong>Ignoring Class Imbalance:</strong>  If your dataset has highly imbalanced classes (e.g., many more examples of one class than another), use stratified sampling techniques to ensure each set has a similar class distribution.</li>
+</ul>
+
+
+<h1 class="text-2xl font-bold mb-2 mt-6">7. Importance of Data Splitting</h1>
+
+<p class="mb-4">Proper data splitting is fundamental to building robust and reliable machine learning models.  It helps assess how well the model generalizes to unseen data, tune hyperparameters effectively, and avoid overfitting. By understanding the roles of the training, validation, and testing sets, you can significantly improve the quality and trustworthiness of your machine learning models.</p>
+
+</body>
+</html>
+```

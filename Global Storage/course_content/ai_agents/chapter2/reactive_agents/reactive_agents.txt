@@ -1,0 +1,138 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactive Agents in AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <h1 class="text-3xl font-bold mb-4">Reactive Agents in Artificial Intelligence</h1>
+
+    <p class="mb-4">Reactive agents are a fundamental type of agent in artificial intelligence. They operate based solely on their current perception of the environment, reacting directly to stimuli without any memory of past experiences or planning for the future. This simplistic approach allows for efficient and rapid responses in specific scenarios.</p>
+
+    <h1 class="text-2xl font-bold mb-2">Overview of Reactive Agents</h1>
+
+    <p class="mb-4">Reactive agents operate on a simple stimulus-response model.  They perceive their environment through sensors and react immediately based on pre-defined rules.  This contrasts with more complex agents that maintain internal state, model the world, and plan future actions.  Key concepts related to reactive agents include:</p>
+
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Agent:</b> A software entity capable of perceiving its environment and acting upon it.</li>
+        <li><b>Environment:</b> The context in which the agent operates, which can be either physical or virtual.</li>
+        <li><b>Perception:</b> The process of acquiring information about the environment through sensors.</li>
+        <li><b>Action:</b> The agent's response to its perception, aimed at achieving its goals.</li>
+    </ul>
+
+    <h1 class="text-2xl font-bold mb-2">Architecture Components of Reactive Agents</h1>
+
+    <p class="mb-4">Reactive agents typically consist of three main modules:</p>
+
+    <h2 class="text-xl font-semibold mb-2">1. Perception Module</h2>
+    <p class="mb-4">This module gathers information about the environment using sensors.  It processes and filters the raw sensory data to provide a simplified representation to the action selection module.</p>
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Sensors:</b> Devices that detect environmental parameters.</li>
+        <li><b>Data Processing:</b> Refining and interpreting sensor data.</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mb-2">2. Action Selection Module</h2>
+    <p class="mb-4">This module determines the appropriate action based on the current perception.  It uses predefined rules or a behavior table to map perceptions to actions.</p>
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Rule-Based System:</b> A set of "if-then" rules that dictate actions.</li>
+        <li><b>Behavior Table:</b> A lookup table mapping perceptions to actions.</li>
+    </ul>
+
+
+    <h2 class="text-xl font-semibold mb-2">3. Execution Module</h2>
+    <p class="mb-4">This module carries out the chosen action by interacting with the environment through actuators or other interfaces.</p>
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Actuators:</b> Devices that perform actions in the physical world.</li>
+        <li><b>Command Interface:</b> Software or hardware that executes commands.</li>
+    </ul>
+
+
+    <h1 class="text-2xl font-bold mb-2">Example: Autonomous Obstacle Avoidance</h1>
+
+    <p class="mb-4">Consider a robot navigating a grid world.  A reactive agent controlling this robot could implement obstacle avoidance as follows:</p>
+
+    <h2 class="text-xl font-semibold mb-2">1. Perception Module</h2>
+    <p class="mb-4">Ultrasonic sensors detect obstacles and measure distances.  The data is processed to identify the closest obstacle and its direction relative to the robot.</p>
+
+    <h2 class="text-xl font-semibold mb-2">2. Action Selection Module</h2>
+    <p class="mb-4">Rules dictate how the robot reacts to obstacles.  For example:</p>
+    <ul class="list-disc ml-6 mb-4">
+        <li>If obstacle is ahead, turn right.</li>
+        <li>If obstacle is to the right, turn left.</li>
+        <li>If no obstacle, move forward.</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold mb-2">3. Execution Module</h2>
+    <p class="mb-4">Motor commands are sent to the robot based on the selected action, causing it to move or turn.</p>
+
+
+    <h1 class="text-2xl font-bold mb-2">Implementation Example (Conceptual Python)</h1>
+
+    <pre class="bg-gray-200 p-4 rounded-md mb-4 overflow-x-auto">
+        <code class="language-python text-sm">
+class PerceptionModule:
+    # ... (Sensor reading and data processing logic)
+
+class ActionSelectionModule:
+    def select_action(self, perception):
+        # ... (Rule-based action selection)
+
+class ExecutionModule:
+    def execute_action(self, action):
+        # ... (Motor control logic)
+
+class ReactiveAgent:
+    def __init__(self):
+        self.perception_module = PerceptionModule()
+        self.action_selection_module = ActionSelectionModule()
+        self.execution_module = ExecutionModule()
+
+    def act(self):
+        perception = self.perception_module.perceive()
+        action = self.action_selection_module.select_action(perception)
+        self.execution_module.execute_action(action)
+        </code>
+    </pre>
+
+
+    <h1 class="text-2xl font-bold mb-2">Advantages of Reactive Agents</h1>
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Simplicity:</b> Easy to design and implement.</li>
+        <li><b>Speed:</b>  Fast response times.</li>
+        <li><b>Scalability:</b> Adaptable to various tasks.</li>
+        <li><b>Low Resource Requirements:</b>  Efficient use of computational resources.</li>
+    </ul>
+
+    <h1 class="text-2xl font-bold mb-2">Limitations of Reactive Agents</h1>
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Lack of Memory:</b> Cannot learn from past experiences.</li>
+        <li><b>Limited Decision-Making:</b>  Relies solely on current perceptions.</li>
+        <li><b>Predictability:</b> Behavior can be easily anticipated.</li>
+        <li><b>No Learning Capability:</b> Unable to adapt to changing environments.</li>
+        <li><b>Suboptimal Performance:</b> Can be inefficient in complex scenarios.</li>
+
+    </ul>
+
+    <h1 class="text-2xl font-bold mb-2">Applications of Reactive Agents</h1>
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>Traffic Light Controllers:</b>  Respond to real-time traffic flow.</li>
+        <li><b>Spam Filters:</b> Classify emails based on predefined criteria.</li>
+        <li><b>Simple Robots:</b>  Perform basic tasks like line following.</li>
+        <li><b>Video Game Enemies:</b> Exhibit simple reactive behaviors.</li>
+
+    </ul>
+
+    <h1 class="text-2xl font-bold mb-2">Conclusion</h1>
+    <p class="mb-4">Reactive agents offer a simple yet powerful approach to building AI systems for specific tasks.  While their limitations restrict their applicability in complex scenarios, their efficiency and ease of implementation make them valuable tools in various domains.</p>
+
+
+</body>
+</html>
+```
+
+
+This expanded explanation dives deeper into the concepts, providing more detailed explanations, code examples, and a broader discussion of advantages, limitations, and applications, aiming for the requested word count.  Remember to adapt the code example to your specific needs and environment, as it's a conceptual illustration.  The styling is implemented using Tailwind CSS as requested.  This detailed structure and explanation should help you gain a comprehensive understanding of Reactive Agents in AI.
