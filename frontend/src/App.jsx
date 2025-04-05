@@ -6,12 +6,13 @@ import MenuPage from "./components/LandingPage/Navbar/MenuPage";
 import RoadmapDisplay from "./components/Dashboard/RoadmapDisplay.jsx";
 import HomePage from "./Homepage.jsx";
 import TopicContent from "./components/Dashboard/TopicContent.jsx";
+import QuizPage from "./components/Dashboard/QuizPage.jsx";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<HomePage />}/>
+        <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/menu" element={<MenuPage />} />
 
@@ -21,6 +22,7 @@ function App() {
           path="/topic/:courseName/:chapterNumber/:topicName"
           element={<TopicContent />}
         />
+        <Route path="/quizpage" element={<QuizPage />} />
       </Routes>
     </>
   );
