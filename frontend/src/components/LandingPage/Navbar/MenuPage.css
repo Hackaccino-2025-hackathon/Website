@@ -1,0 +1,99 @@
+/* Fullscreen container */
+.menu-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('/banner_img.png') no-repeat center center;
+    background-size: cover;  /* Ensures the image covers the whole screen */
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image in place while scrolling */
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px; /* Enables 3D flipping */
+    transform-style: preserve-3d;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    background: #c08aff;
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.1s ease, transform 0.1s ease-in-out;
+}
+
+.close-button:hover {
+    background: linear-gradient(#ff9e4f, #f4c857);
+    transform: scale(1.1);
+}
+
+/* Menu content */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* Menu headings */
+.menu-content h1 {
+    font-size: 4rem;
+    font-weight: 1200;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: black; /* Adjusted for contrast */
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.menu-content h1:hover {
+    color: azure;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Contact button */
+.contact-button {
+    background: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 25px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, background 0.1s;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    background: #f3dfcf;
+}
+
+/* Curtain effect */
+.curtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fbcfb1;
+    transform-origin: center;
+    z-index: 10;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Curtain animation (example: opening effect) */
+.curtain.open {
+    transform: scaleY(0);
+}

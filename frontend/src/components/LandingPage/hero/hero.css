@@ -1,0 +1,131 @@
+/* HeroSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+     /* To account for the navbar */
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    background: url('/banner_img.png') center center/cover no-repeat;
+    z-index: -2;
+  }
+  
+  .hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, rgba(108, 99, 255, 0.7) 0%, rgba(72, 52, 212, 0.7) 100%); */
+    z-index: -1;
+  }
+  
+  .hero-content {
+    max-width: 1100px;
+    text-align: center;
+    padding: black;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 5.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-family: 'Playfair Display', serif; /* Alternative to Canela */
+
+  }
+  
+  .hero-content p {
+    margin-top: -5px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    margin-right:-150px;
+    padding:10px 0px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    padding:10px 20px;
+  }
+  
+  .primary-button, .secondary-button {
+    padding: 1.2rem 3rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    color: #6c63ff;
+  }
+  
+  .primary-button {
+    background: white;
+    
+  }
+  
+  .primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .secondary-button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .secondary-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .hero-shape {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+    z-index: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .primary-button, .secondary-button {
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+    }
+  }
+  
