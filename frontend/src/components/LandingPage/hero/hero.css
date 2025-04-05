@@ -13,19 +13,19 @@
      /* To account for the navbar */
   }
   
-  .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200vh;
-    background: url('/banner_img.png') center center/cover no-repeat;
-    z-index: -2;
-  }
+  .combined {
+      position: relative;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 180vh;
+      background: url('/banner_img_2.png') center center/cover no-repeat;
+      z-index: 3;
+    }
   
   .hero-gradient {
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
@@ -34,28 +34,35 @@
   }
   
   .hero-content {
-    max-width: 1100px;
+    max-width: 1200px;
     text-align: center;
     padding: black;
     z-index: 1;
   }
-  
+  @font-face {
+    font-family: 'Ramona';
+    src: url('/Ramona-Normal.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
   .hero-content h1 {
-    font-size: 5.3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    font-family: 'Playfair Display', serif; /* Alternative to Canela */
+    
+    font-size: 5.8rem;
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+    line-height: 0.9;
+    font-family: 'Ramona', serif;
 
   }
   
   .hero-content p {
-    margin-top: -5px;
+    margin-top: -8px;
     font-size: 1.8rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    margin-right:-150px;
-    padding:10px 0px;
+    margin-right:-100px;
+    
+
   }
   
   .hero-buttons {
@@ -99,10 +106,10 @@
   
   .hero-shape {
     position: absolute;
-    bottom: -100px;
+    bottom: -300px;
     left: 0;
     width: 100%;
-    height: 130px;
+    height: 250px;
     background: white;
     border-radius: 50% 50% 0 0;
     z-index: 0;
@@ -128,4 +135,51 @@
       text-align: center;
     }
   }
+  .floating-section {
+    background: url('/banner_img.png');
+    overflow: hidden;
+    width:calc(100%+120px);
+    /* background-color: #fff; */
+    padding: 100px 100px;
+    /* border-top: 2px solid #66CDAA;
+    border-bottom: 2px solid #66CDAA; */
+    position: relative;
+    z-index: 10;
+  }
   
+  .image-scroll {
+    display: flex;
+    width: max-content;
+    animation: scrollImages 25s linear infinite;
+    align-items: center;
+  }
+  
+  .image-scroll img {
+    height: 800px;
+    width: auto;
+    margin: 0 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-scroll img:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes scrollImages {
+    0% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .scroll-hover-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+ 
+  
+ 
