@@ -1,0 +1,37 @@
+ Course Name: Introduction to Solidity
+
+    Chapter 1: Basics of Solidity
+      - Topic 1: Installation and Setup
+      - Topic 2: First Solidity Contract
+      - Topic 3: Variables, Constants, and Data Types
+      - Topic 4: Basic Operators and Expressions
+
+    Chapter 2: Solidity Structures and Control Structures
+      - Topic 1: Structures and Enums
+      - Topic 2: Loops and Conditional Statements
+      - Topic 3: Functions and Modifiers
+      - Topic 4: Error Handling
+
+    Chapter 3: Deployment, Testing, and Debugging Solidity Contracts
+      - Topic 1: Remix IDE and Truffle Framework
+      - Topic 2: Deploying a Contract on Ethereum Network
+      - Topic 3: Writing Tests for Your Contracts
+      - Topic 4: Debugging Solidity Contracts
+
+    Chapter 4: Smart Contract Interaction
+      - Topic 1: Reading and Writing Data
+      - Topic 2: Events and Logs
+      - Topic 3: External Contract Interactions
+      - Topic 4: Using Libraries and ABI
+
+    Chapter 5: Advanced Solidity Concepts
+      - Topic 1: Inheritance, Interfaces, and Mixins
+      - Topic 2: Security Best Practices
+      - Topic 3: Off-Chain Computations (Turely and Vyper)
+      - Topic 4: ERC Standards
+
+    Chapter 6: DApp Development with Solidity
+      - Topic 1: Building a Decentralized Application (DApp)
+      - Topic 2: Frontend Frameworks (React, Angular, Vue)
+      - Topic 3: Integrating Web3.js and MetaMask
+      - Topic 4: Deploying and Maintaining Your DApp on Ethereum Networks

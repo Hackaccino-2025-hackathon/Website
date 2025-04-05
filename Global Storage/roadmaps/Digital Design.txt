@@ -1,0 +1,37 @@
+ Course Name: Digital Design
+
+   Chapter 1: Introduction to Digital Design
+     - Topic 1: Understanding Digital Design and Its Importance
+     - Topic 2: Basic Principles of Design for Digital Media
+     - Topic 3: Tools and Software Used in Digital Design
+     - Topic 4: Exploring Digital Design Trends
+
+   Chapter 2: Fundamentals of Graphic Design
+     - Topic 1: Color Theory and Its Application in Digital Design
+     - Topic 2: Typography Basics for Digital Media
+     - Topic 3: Layout Principles and Grid Systems
+     - Topic 4: Balancing Elements in Digital Compositions
+
+   Chapter 3: User Interface (UI) Design Fundamentals
+     - Topic 1: Understanding User Experience (UX) and UI Design
+     - Topic 2: UI Design Principles and Best Practices
+     - Topic 3: Creating Wireframes and Prototypes
+     - Topic 4: Interaction Design and Animation for Digital Interfaces
+
+   Chapter 4: Web Design Fundamentals
+     - Topic 1: HTML, CSS, and Responsive Design Basics
+     - Topic 2: Building Navigation Menus and Page Layouts
+     - Topic 3: Creating Interactive Elements and Buttons
+     - Topic 4: Optimizing Web Pages for Performance and Accessibility
+
+   Chapter 5: Motion Graphics and Animation
+     - Topic 1: Introduction to Motion Graphics and Animation
+     - Topic 2: Keyframe Animation Techniques
+     - Topic 3: Creating Simple Looping Animations
+     - Topic 4: Exporting and Optimizing Animations for Digital Media
+
+   Chapter 6: Putting It All Together: Real-World Projects
+     - Topic 1: Designing a Logo from Scratch
+     - Topic 2: Creating a Landing Page for a Hypothetical Company
+     - Topic 3: Designing a Simple Motion Graphic
+     - Topic 4: Final Project: Combining Everything Learned in the Course to Create a Complete Digital Design Portfolio Piece
