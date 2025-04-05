@@ -43,7 +43,7 @@ const AuthPage = () => {
       if (res.ok) {
         localStorage.setItem('token', data.token);
         alert('Login successful!');
-        navigate('/main'); // go to main page after login
+        navigate('/dashboard'); // go to main page after login
       } else {
         alert(data.message || 'Login failed');
       }

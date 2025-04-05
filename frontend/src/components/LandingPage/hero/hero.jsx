@@ -39,7 +39,7 @@ const Hero = () => {
                             backgroundPosition: 'bottom center',
                             backgroundSize: 'contain'
                         }}>
-                            okay!
+                            okafy!
                         </span>
                     </h1>
 
@@ -62,14 +62,13 @@ const Hero = () => {
 
                     </div>
                 </div>
-                <div className="hero-shape"></div>
 
 
             </section>
             <div className="floating-section">
                 <marquee
                     behavior="scroll"
-                    direction="right"
+                    direction="left"
                     scrollAmount="8"
                     style={{ whiteSpace: 'nowrap', margin: '-90px 10px' }}
                 >
@@ -79,7 +78,6 @@ const Hero = () => {
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
-                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_6.png" alt="img6" />
 
                     {/* Duplicate for seamless looping */}
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
@@ -87,7 +85,642 @@ const Hero = () => {
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
-                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_6.png" alt="img6" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
+
+                    {/* Duplicate for seamless looping */}
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_1.png" alt="img1" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_2.png" alt="img2" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_3.png" alt="img3" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_4.png" alt="img4" />
+                    <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
                 </marquee>
             </div>
             
