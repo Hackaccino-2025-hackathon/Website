@@ -1,0 +1,77 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Trees</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <h1 class="text-3xl font-bold mb-4">Decision Trees for Classification and Regression</h1>
+
+    <p class="mb-4">Decision trees are versatile machine learning models used for both classification and regression tasks. They work by recursively partitioning data based on features to create a tree-like structure that predicts outcomes. Their simplicity and interpretability make them a popular choice.</p>
+
+    <h1 class="text-2xl font-bold mb-2">Components of a Decision Tree</h1>
+    <ul class="list-disc pl-6 mb-4">
+        <li><b>Root Node:</b> The starting point representing the entire dataset.</li>
+        <li><b>Branches:</b> Lines connecting nodes, showing the decision flow.</li>
+        <li><b>Internal Nodes:</b> Decision points based on input features.</li>
+        <li><b>Leaf Nodes:</b> Terminal nodes representing final outcomes/predictions.</li>
+    </ul>
+
+    <h1 class="text-2xl font-bold mb-2">Types of Decision Trees</h1>
+    <ul class="list-disc pl-6 mb-4">
+        <li>
+            <b>Classification Trees:</b> Predict categorical outcomes (e.g., spam/not spam).
+            <p class="ml-6 mt-2">These trees categorize data into distinct classes based on feature values.  For instance, they could be used to classify emails as spam or not spam based on sender, content, and other characteristics.</p>
+        </li>
+        <li>
+            <b>Regression Trees:</b> Predict continuous numerical values (e.g., house price).
+            <p class="ml-6 mt-2">Regression trees are employed when the target variable is continuous.  They predict numerical values, such as the price of a house, based on factors like size, location, and market conditions.</p>
+        </li>
+    </ul>
+
+    <h1 class="text-2xl font-bold mb-2">Advantages</h1>
+    <p class="mb-4">Decision trees are valued for their simplicity, making them easy to understand and interpret. Their flowchart-like structure clearly shows the decision-making process.  They are versatile, handling both classification and regression, and don't require feature scaling.  They can also capture non-linear relationships in the data.</p>
+
+    <h1 class="text-2xl font-bold mb-2">Disadvantages</h1>
+    <p class="mb-4">Despite their advantages, decision trees can be prone to overfitting, capturing noise in training data and performing poorly on new data. They can also be unstable, with small input changes leading to different predictions.  Additionally, they might exhibit bias towards features with numerous categories.</p>
+
+    <h1 class="text-2xl font-bold mb-2">Applications</h1>
+    <ul class="list-disc pl-6 mb-4">
+        <li><b>Loan Approval:</b> Assessing loan applications based on income, credit score, etc.</li>
+        <li><b>Medical Diagnosis:</b> Predicting diseases based on patient symptoms and test results.</li>
+        <li><b>Predicting Exam Results:</b> Identifying at-risk students based on study habits and grades.</li>
+    </ul>
+
+
+    <h1 class="text-2xl font-bold mb-2">Code Example (Python)</h1>
+    <pre class="bg-gray-200 p-4 rounded-md mb-4">
+        <code class="text-sm language-python">
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+
+# Sample data (replace with your data)
+X = [[0, 0], [1, 1]]
+y = [0, 1]
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Create and train the decision tree classifier
+clf = DecisionTreeClassifier()
+clf.fit(X_train, y_train)
+
+# Make predictions on the test set
+predictions = clf.predict(X_test)
+
+# Evaluate the model (e.g., using accuracy)
+# ...
+        </code>
+    </pre>
+</body>
+</html>
+
+```

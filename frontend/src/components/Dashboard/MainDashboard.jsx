@@ -1,12 +1,22 @@
 import React from "react";
-
+import { LineChart } from "@mui/x-charts/LineChart";
+import { BarChart } from "@mui/x-charts/BarChart";
 const MainDashboard = () => {
+  const xLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+  const pData = [10, 20, 35, 40, 50, 60];
+
+  // Data for quiz bar chart (graph1)
+  const quizData = [15, 10, 20, 34, 25, 20, 30];
+
+  // Data for answers bar chart (graph2)
+  const answerData = [65, 72, 80, 78.3, 68, 60, 75];
+
   return (
     <>
       <h1 className="font-semibold text-3xl">Welcome Bhagwan</h1>
       <div className="flex flex-col gap-[20px] mt-[40px]">
-        <div class="flex gap-[5px] flex-wrap justify-evenly items-center content-center ">
-          <div class="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-5 ">
+        <div className="flex gap-[5px] flex-wrap justify-evenly items-center content-center ">
+          <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-5 ">
             <div className="flex flex-col justify-between h-full">
               <div className="flex flex-row gap-[10px]">
                 <div className="bg-[#317b74] w-[22%] border-green-100 border-[3px] flex justify-center items-center ">
@@ -48,7 +58,7 @@ const MainDashboard = () => {
               </div>
             </div>
           </div>
-          <div class="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
+          <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
             <div className="flex flex-col justify-between h-full">
               <div className="flex flex-row gap-[10px]">
                 <div className="bg-[#8fffa4] w-[22%] border-green-100 border-[3px] flex justify-center items-center ">
@@ -90,7 +100,7 @@ const MainDashboard = () => {
               </div>
             </div>
           </div>
-          <div class="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
+          <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
             <div className="flex flex-col justify-between h-full">
               <div className="flex flex-row gap-[10px]">
                 <div className="bg-[#ff9e00] w-[22%] border-yellow-100 border-[3px] flex justify-center items-center ">
@@ -134,19 +144,169 @@ const MainDashboard = () => {
       </div>
       <br />
       <div>
-        <div class="flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div class="w-[48%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
-            1
+        <div className="graphs-section flex gap-[20px] flex-wrap justify-center items-center content-center">
+          <div className="w-[48%] border-gray-400 border-1 rounded-2xl h-[240px] p-3 flex justify-center items-center">
+            <LineChart
+              width={450}
+              height={250}
+              series={[
+                {
+                  data: pData,
+                  label: "pv",
+                  color: "#317b74",
+                  area: false,
+                  showMark: true, // Added dots on the line graph
+                  lineWidth: 2,
+                  markSize: 5, // Set the size of the dots
+                },
+              ]}
+              xAxis={[{ scaleType: "point", data: xLabels }]}
+              yAxis={[
+                {
+                  tickFormat: () => "",
+                  stroke: "none",
+                  disableTicks: true,
+                  disableAxisLine: true,
+                  position: "left",
+                  axisLabel: "",
+                },
+              ]}
+              // Move legend to the leftmost part
+              slotProps={{
+                legend: {
+                  position: {
+                    vertical: "top",
+                    horizontal: "left",
+                  },
+                  padding: 0,
+                  labelStyle: {
+                    fontSize: 14,
+                  },
+                },
+              }}
+              sx={{
+                ".MuiChartsAxis-left .MuiChartsAxis-tickLabel": {
+                  display: "none",
+                },
+                ".MuiChartsAxis-left .MuiChartsAxis-line": {
+                  display: "none",
+                },
+              }}
+            />
           </div>
-          <div class="w-[48%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
-            2
+          <div className="w-[48%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
+            <h1 className="font-semibold text-2xl mb-[20px]">Lessons</h1>
+            <div className="bg-[#fef0f0] rounded-2xl px-[50px] ">
+              <div className="flex flex-row py-[10px] gap-4 justify-between items-center">
+                <div className="flex flex-col  leading-0.5">
+                  <span className="w-[30%] font-semibold text-xl ">34</span>{" "}
+                  <span className="font-normal text-sm">Quizzes</span>
+                </div>
+                <div>
+                  {" "}
+                  <BarChart
+                    width={100}
+                    height={60}
+                    series={[
+                      {
+                        data: quizData,
+                        color: "#ff6b6b",
+                        barWidth: 0.4,
+                      },
+                    ]}
+                    xAxis={[
+                      {
+                        data: [1, 2, 3, 4, 5, 6, 7],
+                        scaleType: "band",
+                        position: "bottom",
+                        tickSize: 0,
+                        ticksVisible: false,
+                        axisBorder: { stroke: "transparent" },
+                        labelStyle: { display: "none" },
+                        disableTicks: true,
+                        disableAxisLine: true,
+                        disableGridLines: true,
+                      },
+                    ]}
+                    yAxis={[
+                      {
+                        scaleType: "linear",
+                        position: "left",
+                        tickSize: 0,
+                        ticksVisible: false,
+                        axisBorder: { stroke: "transparent" },
+                        labelStyle: { display: "none" },
+                        disableTicks: true,
+                        disableAxisLine: true,
+                        disableGridLines: true,
+                      },
+                    ]}
+                    margin={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    sx={{
+                      ".MuiChartsAxis-root": { display: "none" },
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row py-[10px] gap-4 justify-between items-center">
+                <div className="flex flex-col  leading-0.5">
+                  <span className="w-[30%] font-semibold text-xl ">78.3%</span>{" "}
+                  <span className="font-normal text-sm">Answers</span>
+                </div>
+                <div>
+                  {" "}
+                  <BarChart
+                    width={100}
+                    height={60}
+                    series={[
+                      {
+                        data: answerData,
+                        color: "#317b74",
+                        barWidth: 0.4,
+                      },
+                    ]}
+                    xAxis={[
+                      {
+                        data: [1, 2, 3, 4, 5, 6, 7],
+                        scaleType: "band",
+                        position: "bottom",
+                        tickSize: 0,
+                        ticksVisible: false,
+                        axisBorder: { stroke: "transparent" },
+                        labelStyle: { display: "none" },
+                        disableTicks: true,
+                        disableAxisLine: true,
+                        disableGridLines: true,
+                      },
+                    ]}
+                    yAxis={[
+                      {
+                        scaleType: "linear",
+                        position: "left",
+                        tickSize: 0,
+                        ticksVisible: false,
+                        axisBorder: { stroke: "transparent" },
+                        labelStyle: { display: "none" },
+                        disableTicks: true,
+                        disableAxisLine: true,
+                        disableGridLines: true,
+                      },
+                    ]}
+                    margin={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    sx={{
+                      ".MuiChartsAxis-root": { display: "none" },
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <br />
       <div>
-        <div class="flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div class="w-[98%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
+        <div className="flex gap-[20px] flex-wrap justify-center items-center content-center">
+          <div className="w-[98%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
             2
           </div>
         </div>

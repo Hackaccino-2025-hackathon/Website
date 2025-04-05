@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const dotenv = require("dotenv");
+const path = require("path");
 
 dotenv.config();
 
@@ -13,12 +14,17 @@ const summarizeContent = async (textContent) => {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
     const prompt = `
+    you will get a raw text which has a ton of useless data which are not required
+your task is to remove that data and then summarize the data in the following format
+
+there should be headdings in <h1/> the paragarphs should b in <p/>tags and write the necessary code with tailwind for the code snippets. additionally you can use <li/> and <ul/> tags where ever necessary
 Summarize the following content in a clear and concise manner. 
 Make sure to preserve key points and important details:
+Explain each and every topic in a very consise and clear manner. dive deep into each topic and write near 200 words
 
 ${textContent}
 
-[NOTE: Provide the summary in markdown format for better readability. Do not add extra narration.]
+[NOTE: Do not add extra narration. if some data is not found in the textcontent then generate that data accordingly]
     `;
 
     const response = await model.generateContent([prompt]);

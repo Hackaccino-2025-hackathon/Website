@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const path = require("path");
 
 async function searchTopLinks(keyword) {
   try {
@@ -28,7 +29,7 @@ async function searchTopLinks(keyword) {
             !href.includes("khanacademy") &&
             !href.includes("freshworks")
         )
-        .slice(0, 3);
+        .slice(0, 1);
     });
 
     await browser.close();
