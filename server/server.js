@@ -128,6 +128,52 @@ app.post("/summarize-course", async (req, res) => {
   }
 });
 
+// Add this endpoint to your server.js file
+
+app.get("/api/file-content", (req, res) => {
+  const { courseName, chapterNumber, topicName } = req.query;
+
+  if (!courseName || !chapterNumber || !topicName) {
+    return res.status(400).json({
+      error:
+        "Missing required parameters: courseName, chapterNumber, or topicName",
+    });
+  }
+
+  // Format the parameters to match your file structure
+  const safeCourseName = courseName.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+  const safeTopicName = topicName.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+
+  const filePath = path.join(
+    __dirname,
+    "..",
+    "Global Storage",
+    "course_content",
+    safeCourseName,
+    `chapter${chapterNumber}`,
+    safeTopicName,
+    `${safeTopicName}.txt`
+  );
+
+  // Check if file exists
+  fs.access(filePath, fs.constants.F_OK, (err) => {
+    if (err) {
+      console.error(`File not found: ${filePath}`, err);
+      return res.status(404).json({ error: "File not found" });
+    }
+
+    // Read and send file content
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) {
+        console.error(`Error reading file: ${filePath}`, err);
+        return res.status(500).json({ error: "Failed to read file" });
+      }
+
+      res.json({ content: data });
+    });
+  });
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server is running on port ${port}`);
 });

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Roadmaps = () => {
   const [courseName, setCourseName] = useState("");
   const [summarizedFiles, setSummarizedFiles] = useState([]);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,6 +19,8 @@ const Roadmaps = () => {
 
       const courseData = await courseRes.json();
       const courseText = courseData.course_outline.text;
+
+      navigate("/roadmapdisplay", { state: { courseText } });
 
       console.log("Course Text:", courseText);
 
@@ -33,7 +37,9 @@ const Roadmaps = () => {
       const summaryData = await summarizeRes.json();
 
       // Step 3: Save and show the file paths
-      setSummarizedFiles(summaryData.savedFiles || []);
+      const files = summaryData.savedFiles || [];
+
+      setSummarizedFiles(files);
 
       console.log(summarizedFiles);
     } catch (error) {
