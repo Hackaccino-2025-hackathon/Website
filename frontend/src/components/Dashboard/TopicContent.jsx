@@ -276,6 +276,20 @@ const TopicContent = () => {
           />
         )}
       </div>
+      <button
+        onClick={() =>
+          navigate(
+            `/quizpage?courseName=${encodeURIComponent(
+              courseName
+            )}&chapterNumber=${encodeURIComponent(
+              chapterNumber
+            )}&topicName=${encodeURIComponent(topicName)}`
+          )
+        }
+        className="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+      >
+        Go to Quiz
+      </button>
     </div>
   );
 };
