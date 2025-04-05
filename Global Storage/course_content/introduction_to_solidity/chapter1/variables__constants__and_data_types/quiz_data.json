@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-04-05T22:56:04.436Z",
+  "questions": [
+    {
+      "questionText": "What is the purpose of the 'const' keyword in C?",
+      "options": [
+        "To declare a variable that can store any data type",
+        "To declare a variable whose value cannot be changed after initialization",
+        "To define a function that does not return any value",
+        "To include external libraries in the code"
+      ],
+      "correctAnswer": 1,
+      "userAnswer": 1,
+      "isCorrect": true
+    },
+    {
+      "questionText": "Which of the following is NOT a valid integer literal in C?",
+      "options": [
+        "1234",
+        "0xFA",
+        "0777",
+        "3.14"
+      ],
+      "correctAnswer": 3,
+      "userAnswer": 2,
+      "isCorrect": false
+    },
+    {
+      "questionText": "What is the output of the following code snippet?\n```c\n#include <stdio.h>\nint main() {\n    int x = 5;\n    printf(\"x = %d\", x++);\n    return 0;\n}\n```",
+      "options": [
+        "x = 6",
+        "x = 5",
+        "x = 4",
+        "Compilation error"
+      ],
+      "correctAnswer": 1,
+      "userAnswer": 1,
+      "isCorrect": true
+    },
+    {
+      "questionText": "Which data type is used to store single characters in C?",
+      "options": [
+        "int",
+        "float",
+        "string",
+        "char"
+      ],
+      "correctAnswer": 3,
+      "userAnswer": 3,
+      "isCorrect": true
+    },
+    {
+      "questionText": "What is the purpose of the 'scanf()' function in C?",
+      "options": [
+        "To print formatted output to the console",
+        "To read formatted input from the console",
+        "To declare a new variable",
+        "To perform mathematical calculations"
+      ],
+      "correctAnswer": 1,
+      "userAnswer": 2,
+      "isCorrect": false
+    }
+  ],
+  "score": 0
+}
