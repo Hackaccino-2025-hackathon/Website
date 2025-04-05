@@ -6,6 +6,8 @@ import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import MenuPage from "./components/LandingPage/Navbar/MenuPage";
 import RoadmapDisplay from "./components/Dashboard/RoadmapDisplay.jsx";
 
+import TopicContent from "./components/Dashboard/TopicContent.jsx";
+
 function App() {
   return (
     <>
@@ -16,6 +18,10 @@ function App() {
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/roadmapdisplay" element={<RoadmapDisplay />} />
+        <Route
+          path="/topic/:courseName/:chapterNumber/:topicName"
+          element={<TopicContent />}
+        />
       </Routes>
     </>
   );
