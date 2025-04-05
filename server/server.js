@@ -707,6 +707,49 @@ app.get("/video-stream", (req, res) => {
   });
 });
 
+app.post("/api/save-quiz-data", async (req, res) => {
+  const {
+    courseName,
+    chapterNumber,
+    topicName,
+    questions,
+    userAnswers,
+    score,
+  } = req.body;
+
+  const safeCourseName = courseName.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+  const safeTopicName = topicName.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+
+  const dirPath = path.join(
+    __dirname,
+    "..",
+    "Global Storage",
+    "course_content",
+    safeCourseName,
+    `chapter${chapterNumber}`,
+    safeTopicName
+  );
+
+  const filePath = path.join(dirPath, "quiz_data.json");
+
+  try {
+    fs.mkdirSync(dirPath, { recursive: true });
+
+    const dataToSave = {
+      timestamp: new Date().toISOString(),
+      questions,
+      userAnswers,
+      score,
+    };
+
+    fs.writeFileSync(filePath, JSON.stringify(dataToSave, null, 2));
+    res.json({ message: "Quiz data saved successfully" });
+  } catch (err) {
+    console.error("Error saving quiz data:", err);
+    res.status(500).json({ error: "Failed to save quiz data" });
+  }
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server is running on port ${port}`);
 });

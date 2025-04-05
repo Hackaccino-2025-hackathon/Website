@@ -328,6 +328,47 @@ const QuizPage = () => {
     setUserAnswers(newAnswers);
   };
 
+  const saveQuizData = async () => {
+    if (!quiz || !quiz.questions) return;
+
+    const enrichedQuestions = quiz.questions.map((question, index) => ({
+      questionText: question.question,
+      options: question.options,
+      correctAnswer: question.correctAnswer,
+      userAnswer: userAnswers[index],
+      isCorrect: userAnswers[index] === question.correctAnswer,
+    }));
+
+    const payload = {
+      courseName,
+      chapterNumber,
+      topicName,
+      score,
+      totalQuestions: quiz.questions.length,
+      questions: enrichedQuestions,
+      timestamp: new Date().toISOString(),
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/api/save-quiz-data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to save quiz data");
+      }
+
+      console.log("✅ Quiz data saved successfully.");
+    } catch (err) {
+      console.error("❌ Error saving quiz data:", err);
+    }
+  };
+
   const handleNextQuestion = () => {
     if (currentQuestion < quiz.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -341,6 +382,9 @@ const QuizPage = () => {
       }
       setScore(newScore);
       setQuizCompleted(true);
+
+      // Save quiz data at once
+      saveQuizData();
     }
   };
 
