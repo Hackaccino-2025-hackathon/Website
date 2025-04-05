@@ -1,0 +1,340 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Algorithms for Problem Solving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <h1 class="text-3xl font-bold mb-4">Search Algorithms for Problem Solving in AI</h1>
+
+    <p class="mb-4">Search algorithms are fundamental to Artificial Intelligence (AI), enabling intelligent agents to find solutions to complex problems.  They systematically explore a problem space to find a path from an initial state to a desired goal state. This document provides a comprehensive overview of various search algorithms categorized as uninformed and informed search, delving into their mechanisms, advantages, and disadvantages.</p>
+
+    <h1 class="text-2xl font-bold mb-4">Understanding the Search Problem</h1>
+
+    <p class="mb-4">A search problem is formally defined by:</p>
+
+    <ul class="list-disc ml-6 mb-4">
+        <li><b>State Space:</b> The set of all possible configurations or states the problem can be in.</li>
+        <li><b>Start State:</b> The initial state of the problem.</li>
+        <li><b>Goal State:</b>  A state or set of states that represent the desired solution.</li>
+        <li><b>Actions/Operators:</b>  The possible transitions between states.</li>
+        <li><b>Path Cost:</b> A function assigning a cost to each path or action, representing the effort required to make the transition.  This could be distance, time, or any other relevant metric.</li>
+    </ul>
+
+    <p class="mb-4">A solution is a sequence of actions that leads from the start state to a goal state. Search algorithms aim to find this optimal sequence.</p>
+
+
+
+    <h1 class="text-2xl font-bold mb-4">Uninformed Search Algorithms</h1>
+
+    <p class="mb-4">Uninformed search algorithms explore the state space without any domain-specific knowledge about the problem. They are also known as blind search algorithms.  They rely solely on the problem definition and explore systematically.</p>
+
+    <h2 class="text-xl font-bold mb-2">Depth-First Search (DFS)</h2>
+    <p class="mb-4">DFS explores as deeply as possible along each branch before backtracking.  It uses a Last-In, First-Out (LIFO) stack to keep track of the nodes to visit.</p>
+    <p class="mb-4"><b>Advantages:</b> Space-efficient, can find solutions quickly in deeply branched trees if the solution lies on a path early in the search.</p>
+    <p class="mb-4"><b>Disadvantages:</b> Can get stuck in infinite loops, not guaranteed to find the shortest path (non-optimal).</p>
+
+<pre class="bg-gray-200 p-4 rounded-lg mb-4">
+```python
+def depth_first_search(graph, start, goal):
+    stack = [(start, [start])]
+    visited = set()
+
+    while stack:
+        (vertex, path) = stack.pop()
+        if vertex not in visited:
+            if vertex == goal:
+                return path
+            visited.add(vertex)
+            for neighbor in graph[vertex]:
+                stack.append((neighbor, path + [neighbor]))
+    return None
+
+
+# Example usage
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F'],
+    'D': [],
+    'E': ['F'],
+    'F': []
+}
+start_node = 'A'
+goal_node = 'F'
+path = depth_first_search(graph, start_node, goal_node)
+
+if path:
+    print(f"Path found: {path}")
+else:
+    print("Path not found.")
+
+
+```
+</pre>
+
+
+    <h2 class="text-xl font-bold mb-2">Breadth-First Search (BFS)</h2>
+    <p class="mb-4">BFS explores level by level, starting from the root. It uses a First-In, First-Out (FIFO) queue to store nodes.</p>
+    <p class="mb-4"><b>Advantages:</b> Guaranteed to find the shortest path if the path cost is uniform (optimal), complete (will find a solution if one exists).</p>
+    <p class="mb-4"><b>Disadvantages:</b> Memory-intensive, can be slow for large or deeply branched trees.</p>
+
+
+<pre class="bg-gray-200 p-4 rounded-lg mb-4">
+```python
+from collections import deque
+
+def breadth_first_search(graph, start, goal):
+  queue = deque([(start, [start])])
+  visited = set()
+
+  while queue:
+    (vertex, path) = queue.popleft()
+    if vertex not in visited:
+      if vertex == goal:
+        return path
+      visited.add(vertex)
+      for neighbor in graph[vertex]:
+        queue.append((neighbor, path + [neighbor]))
+
+  return None
+
+# Example graph (same as DFS example)
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F'],
+    'D': [],
+    'E': ['F'],
+    'F': []
+}
+
+start_node = 'A'
+goal_node = 'F'
+path = breadth_first_search(graph, start_node, goal_node)
+
+if path:
+    print(f"Path found: {path}")
+else:
+    print("Path not found.")
+
+```
+</pre>
+
+
+
+    <h2 class="text-xl font-bold mb-2">Uniform Cost Search (UCS)</h2>
+    <p class="mb-4">UCS expands nodes based on their path cost from the start node, prioritizing the lowest-cost path.  It uses a priority queue to store nodes sorted by cost.</p>
+    <p class="mb-4"><b>Advantages:</b> Guaranteed to find the lowest-cost path (optimal) even with varying path costs.</p>
+    <p class="mb-4"><b>Disadvantages:</b> Can explore unnecessary parts of the state space, particularly if the goal is far from the start and path costs are relatively uniform.</p>
+
+
+<pre class="bg-gray-200 p-4 rounded-lg mb-4">
+```python
+import heapq
+
+def uniform_cost_search(graph, start, goal):
+    queue = [(0, start, [start])]  # (cost, vertex, path)
+    visited = set()
+
+    while queue:
+        (cost, vertex, path) = heapq.heappop(queue)
+        if vertex not in visited:
+            if vertex == goal:
+                return path
+            visited.add(vertex)
+            for neighbor, edge_cost in graph[vertex].items():
+                heapq.heappush(queue, (cost + edge_cost, neighbor, path + [neighbor]))
+
+    return None
+
+
+# Example usage (with costs)
+graph = {
+    'A': {'B': 1, 'C': 3},
+    'B': {'D': 2, 'E': 4},
+    'C': {'F': 5},
+    'D': {},
+    'E': {'F': 1},
+    'F': {}
+}
+
+start_node = 'A'
+goal_node = 'F'
+
+path = uniform_cost_search(graph, start_node, goal_node)
+if path:
+    print(f"Path found: {path}")
+else:
+    print("Path not found.")
+
+
+```
+</pre>
+
+
+
+    <h1 class="text-2xl font-bold mb-4">Informed Search Algorithms</h1>
+    <p class="mb-4">Informed search algorithms use heuristic functions to estimate the distance to the goal, guiding the search towards more promising states.  This additional information allows for more efficient search, especially in large state spaces.</p>
+
+    <h2 class="text-xl font-bold mb-2">Greedy Best-First Search</h2>
+    <p class="mb-4">Greedy best-first search expands the node that appears closest to the goal based on the heuristic function. It doesn't consider the cost so far.</p>
+    <p class="mb-4"><b>Advantages:</b> Can be faster than uninformed search, especially if the heuristic is good. </p>
+    <p class="mb-4"><b>Disadvantages:</b> Not complete, not optimal, can get stuck in local maxima or plateaus.</p>
+
+
+<pre class="bg-gray-200 p-4 rounded-lg mb-4">
+```python
+import heapq
+
+def greedy_best_first_search(graph, start, goal, heuristic):
+    queue = [(heuristic[start], start, [start])]
+    visited = set()
+
+
+    while queue:
+        (h, vertex, path) = heapq.heappop(queue)
+
+
+        if vertex not in visited:
+            if vertex == goal:
+                return path
+
+
+            visited.add(vertex)
+            for neighbor in graph.get(vertex, []):  # Handle cases where a node has no neighbors
+                if neighbor not in visited:
+                    heapq.heappush(queue, (heuristic[neighbor], neighbor, path + [neighbor]))
+
+
+
+    return None
+
+
+
+
+# Example usage
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F'],
+    'D': [],
+    'E': ['F'],
+    'F': []
+}
+
+
+heuristic = {
+    'A': 10,
+    'B': 8,
+    'C': 5,
+    'D': 7,
+    'E': 3,
+    'F': 0
+}
+start_node = 'A'
+goal_node = 'F'
+
+
+
+
+path = greedy_best_first_search(graph, start_node, goal_node, heuristic)
+if path:
+    print(f"Path found: {path}")
+else:
+    print("Path not found.")
+
+
+
+
+```
+</pre>
+
+
+    <h2 class="text-xl font-bold mb-2">A* Search</h2>
+    <p class="mb-4">A* search combines the cost so far (g(n)) and the estimated cost to the goal (h(n)) using the evaluation function f(n) = g(n) + h(n).  It uses a priority queue to explore nodes with the lowest f(n) first. </p>
+    <p class="mb-4"><b>Advantages:</b> Complete and optimal if the heuristic is admissible (never overestimates the actual cost) and consistent (satisfies the triangle inequality).</p>
+    <p class="mb-4"><b>Disadvantages:</b> Can be memory-intensive, especially with a large state space and a less informative heuristic.</p>
+
+ <pre class="bg-gray-200 p-4 rounded-lg mb-4">
+```python
+import heapq
+
+def a_star_search(graph, start, goal, heuristic):
+    queue = [(0 + heuristic[start], 0, start, [start])] #(f,g,vertex,path)
+    visited = set()
+
+
+    while queue:
+        (f, g, vertex, path) = heapq.heappop(queue)
+
+
+        if vertex not in visited:
+            if vertex == goal:
+                return path
+
+
+            visited.add(vertex)
+            for neighbor, cost in graph.get(vertex, {}).items(): # handle no neighbors
+                if neighbor not in visited:
+
+                    new_g = g + cost
+                    new_f = new_g + heuristic[neighbor]
+                    heapq.heappush(queue, (new_f, new_g, neighbor, path + [neighbor]))
+
+
+
+    return None
+
+
+
+
+
+
+# Example usage (same graph structure as UCS, but with heuristic added)
+graph = {
+    'A': {'B': 1, 'C': 3},
+    'B': {'D': 2, 'E': 4},
+    'C': {'F': 5},
+    'D': {},
+    'E': {'F': 1},
+    'F': {}
+
+}
+heuristic = {
+    'A': 7,
+    'B': 6,
+    'C': 2,
+    'D': 5,
+    'E': 1,
+    'F': 0
+}
+start_node = 'A'
+goal_node = 'F'
+
+
+
+
+path = a_star_search(graph, start_node, goal_node, heuristic)
+
+if path:
+    print(f"Path found: {path}")
+else:
+    print("Path not found.")
+
+```
+</pre>
+
+
+     <h1 class="text-2xl font-bold mb-4">Choosing the Right Algorithm</h1>
+    <p class="mb-4">The choice of search algorithm depends on the specific problem characteristics, including the size and structure of the state space, the available computational resources, and the desired properties of the solution (optimality, completeness, etc.).</p>
+
+
+
+</body>
+</html>
+```

@@ -1,6 +1,7 @@
 import React from "react";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { BarChart } from "@mui/x-charts/BarChart";
+
 const MainDashboard = () => {
   const xLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
   const pData = [10, 20, 35, 40, 50, 60];
@@ -92,7 +93,7 @@ const MainDashboard = () => {
                     viewBox="0 0 20 20"
                   >
                     <path
-                      fillCourses="currentColor"
+                      fill="currentColor"
                       d="m16.172 9l-6.071-6.071l1.414-1.414L20 10l-.707.707l-7.778 7.778l-1.414-1.414L16.172 11H0V9z"
                     />
                   </svg>
@@ -152,12 +153,12 @@ const MainDashboard = () => {
               series={[
                 {
                   data: pData,
-                  label: "pv",
+                  label: "Hours Spent",
                   color: "#317b74",
                   area: false,
-                  showMark: true, // Added dots on the line graph
+                  showMark: true,
                   lineWidth: 2,
-                  markSize: 5, // Set the size of the dots
+                  markSize: 5,
                 },
               ]}
               xAxis={[{ scaleType: "point", data: xLabels }]}
@@ -171,7 +172,6 @@ const MainDashboard = () => {
                   axisLabel: "",
                 },
               ]}
-              // Move legend to the leftmost part
               slotProps={{
                 legend: {
                   position: {
@@ -306,8 +306,77 @@ const MainDashboard = () => {
       <br />
       <div>
         <div className="flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div className="w-[92%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
-            2
+          <div className="w-[92%] border-gray-400 border-1 rounded-2xl h-auto p-3">
+            <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-between items-center">
+                <h2 className="text-xl font-semibold">Continue Learning</h2>
+                <div className="flex space-x-2">
+                  <input
+                    type="text"
+                    placeholder="Search your courses..."
+                    className="border rounded px-3 py-1"
+                  />
+                  <button className="bg-gray-200 px-3 py-1 rounded">
+                    See All
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <div className="grid grid-cols-3 text-gray-600 font-semibold text-sm pb-2">
+                  <div>Course Name</div>
+                  <div>Progress</div>
+                  <div className="text-right">Status</div>
+                </div>
+
+                {/* Course 1 */}
+                <div className="bg-gray-50 p-4 rounded-lg shadow flex items-center space-x-4 mb-3">
+                  <div className="flex-1">
+                    <p className="font-semibold">Linear Algebra</p>
+                    <p className="text-sm text-gray-500">5 hours • Advanced</p>
+                    <div className="mt-2 w-full bg-gray-200 h-2 rounded">
+                      <div className="bg-green-600 h-2 rounded w-2/5"></div>
+                    </div>
+                  </div>
+                  <span className="bg-gray-200 px-3 py-1 text-sm rounded flex items-center">
+                    ⏳ In progress
+                  </span>
+                  <span className="text-gray-400 text-xl">&gt;</span>
+                </div>
+
+                {/* Course 2 */}
+                <div className="bg-gray-50 p-4 rounded-lg shadow flex items-center space-x-4 mb-3">
+                  <div className="flex-1">
+                    <p className="font-semibold">Designing Algorithms</p>
+                    <p className="text-sm text-gray-500">16 hours • Advanced</p>
+                    <div className="mt-2 w-full bg-gray-200 h-2 rounded">
+                      <div className="bg-green-500 h-2 rounded w-3/5"></div>
+                    </div>
+                  </div>
+                  <span className="bg-gray-200 px-3 py-1 text-sm rounded flex items-center">
+                    ⏳ In progress
+                  </span>
+                  <span className="text-gray-400 text-xl">&gt;</span>
+                </div>
+
+                {/* Course 3 */}
+                <div className="bg-gray-50 p-4 rounded-lg shadow flex items-center space-x-4">
+                  <div className="flex-1">
+                    <p className="font-semibold">Blockchain</p>
+                    <p className="text-sm text-gray-500">
+                      9 hours • Intermediate
+                    </p>
+                    <div className="mt-2 w-full bg-gray-200 h-2 rounded">
+                      <div className="bg-green-700 h-2 rounded w-full"></div>
+                    </div>
+                  </div>
+                  <span className="bg-black text-white px-3 py-1 text-sm rounded flex items-center">
+                    ✔ Completed
+                  </span>
+                  <span className="text-gray-400 text-xl">&gt;</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

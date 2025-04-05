@@ -371,7 +371,7 @@ const Dashboard = () => {
       <div className="bg-white p-5 shadow-md overflow-y-auto">
         {renderContent()}
       </div>
-      <div className="bg-gray-200 p-4">Right Sidebar</div>
+      <div className="bg-gray-200 p-4">.</div>
     </div>
   );
 };
