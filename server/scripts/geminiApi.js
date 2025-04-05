@@ -4,7 +4,7 @@ const path = require("path");
 
 dotenv.config();
 
-const GEMINI_API_KEY = "AIzaSyCMhDVqvC_i9ITCXm1WjTIpmcODDaNTCUI";
+const GEMINI_API_KEY = "AIzaSyC1rHHfMvy6PKqBlDMesIo8qyN0y_GtMLE";
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 const summarizeContent = async (textContent) => {
