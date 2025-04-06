@@ -72,19 +72,33 @@
   justify-content: space-between;
   width: 30px;
   height: 24px;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  transition: background-color 0.3s ease;
 }
 
 .hamburger span {
   width: 100%;
-  padding:0px 22px;
+  padding: 0px 22px;
   height: 5px;
   background-color: #414040;
-  transition: all 0.3s ease;
   border-radius: 3px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.hamburger:hover {
+  background-color: #C291FE;
+}
+
+.hamburger:hover span {
+  background-color: #C291FE;
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(19px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -94,6 +108,7 @@
 .hamburger.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
+
 
 .navbar-menu {
   display: flex;
