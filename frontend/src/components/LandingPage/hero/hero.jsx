@@ -39,7 +39,7 @@ const Hero = () => {
                             backgroundPosition: 'bottom center',
                             backgroundSize: 'contain'
                         }}>
-                            okafy!
+                            spark!
                         </span>
                     </h1>
 
@@ -51,8 +51,8 @@ const Hero = () => {
                             textAlign: "center" // Optional: Center align text
                         }}
                     >
-                        Be a member of this wonderful community, to learn. <br /> We can do so much together, than being alone!
-                    </p>                <div className="hero-buttons">
+                        Be a learner in this vibrant classroom, to grow. <br />
+                        We can build more knowledge, than learning alone!                    </p>                <div className="hero-buttons">
                         <a href="/about" className="primary-button" style={{ fontSize: '30px', backgroundColor: '#66CDAA', color: 'black' }}>
                             About Us!
                         </a>
@@ -723,7 +723,7 @@ const Hero = () => {
                     <img style={{ display: 'inline-block', margin: '0 25px', height: '300px' }} src="/floating_section_5.png" alt="img5" />
                 </marquee>
             </div>
-            
+
 
 
 

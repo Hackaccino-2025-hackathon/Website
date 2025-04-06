@@ -3,214 +3,161 @@ import { LineChart } from "@mui/x-charts/LineChart";
 import { BarChart } from "@mui/x-charts/BarChart";
 
 const MainDashboard = () => {
-  const xLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
-  const pData = [10, 20, 35, 40, 50, 60];
-
-  // Data for quiz bar chart (graph1)
+  // Data for line chart (hours spent)
+  const hoursData = [15, 20, 18, 25, 22, 30, 30];
+  const daysLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  
+  // Data for quiz bar chart
   const quizData = [15, 10, 20, 34, 25, 20, 30];
 
-  // Data for answers bar chart (graph2)
+  // Data for answers bar chart
   const answerData = [65, 72, 80, 78.3, 68, 60, 75];
 
   return (
-    <>
-      <h1 className="font-semibold text-3xl">Welcome Bhagwan</h1>
-      <div className="flex flex-col gap-[20px] mt-[40px]">
-        <div className="flex gap-[5px] flex-wrap justify-evenly items-center content-center ">
-          <div className="w-[28%] border-gray-400 border-1 rounded-2xl h-[157px] p-5 ">
-            <div className="flex flex-col justify-between h-full">
-              <div className="flex flex-row gap-[10px]">
-                <div className="bg-[#317b74] w-[22%] border-green-100 border-[3px] flex justify-center items-center ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M12 2L0 9l12 7l10-5.833V17.5h2V9zM3.999 13.49V18a9.99 9.99 0 0 0 8 4A9.99 9.99 0 0 0 20 18v-4.509l-8 4.667z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold">32</span>{" "}
-                  <span className="t font-normal text-gray-600">
-                    Enrolled Courses
-                  </span>
-                </div>
-              </div>
-              <hr className="mx-[25px] text-gray-600" />
-              <div className="flex flex-row justify-between items-center text-gray-600">
-                <span className="text-gray-600">View Details</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="m16.172 9l-6.071-6.071l1.414-1.414L20 10l-.707.707l-7.778 7.778l-1.414-1.414L16.172 11H0V9z"
-                    />
-                  </svg>
-                </span>
-              </div>
+    <div className="bg-gray-50 min-h-screen">
+      <div className="p-6 max-w-6xl mx-auto">
+        {/* Header with user info */}
+        <div className="flex justify-between items-center">
+          <h1 className="font-bold text-2xl text-gray-900">Welcome Nikhil</h1>
+          <div className="flex items-center space-x-4">
+            <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">
+              <span className="text-gray-600">👤</span>
             </div>
-          </div>
-          <div className="w-[28%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
-            <div className="flex flex-col justify-between h-full">
-              <div className="flex flex-row gap-[10px]">
-                <div className="bg-[#8fffa4] w-[22%] border-green-100 border-[3px] flex justify-center items-center ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M12 2L0 9l12 7l10-5.833V17.5h2V9zM3.999 13.49V18a9.99 9.99 0 0 0 8 4A9.99 9.99 0 0 0 20 18v-4.509l-8 4.667z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold">2</span>{" "}
-                  <span className="t font-normal text-gray-600">
-                    Completed Roadmaps
-                  </span>
-                </div>
-              </div>
-              <hr className="mx-[25px] text-gray-600" />
-              <div className="flex flex-row justify-between items-center text-gray-600">
-                <span className="text-gray-600">View Details</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="m16.172 9l-6.071-6.071l1.414-1.414L20 10l-.707.707l-7.778 7.778l-1.414-1.414L16.172 11H0V9z"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="w-[28%] border-gray-400 border-1 rounded-2xl h-[157px] p-3">
-            <div className="flex flex-col justify-between h-full">
-              <div className="flex flex-row gap-[10px]">
-                <div className="bg-[#ff9e00] w-[22%] border-yellow-100 border-[3px] flex justify-center items-center ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M12 2L0 9l12 7l10-5.833V17.5h2V9zM3.999 13.49V18a9.99 9.99 0 0 0 8 4A9.99 9.99 0 0 0 20 18v-4.509l-8 4.667z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold">34</span>{" "}
-                  <span className="t font-normal text-gray-600">Quizes</span>
-                </div>
-              </div>
-              <hr className="mx-[25px] text-gray-600" />
-              <div className="flex flex-row justify-between items-center text-gray-600">
-                <span className="text-gray-600">View Details</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="m16.172 9l-6.071-6.071l1.414-1.414L20 10l-.707.707l-7.778 7.778l-1.414-1.414L16.172 11H0V9z"
-                    />
-                  </svg>
-                </span>
-              </div>
+            <div className="w-6 h-6 flex items-center justify-center">
+              <span className="text-gray-600">🔔</span>
             </div>
           </div>
         </div>
-      </div>
-      <br />
-      <div>
-        <div className="graphs-section flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div className="w-[45%] border-gray-400 border-1 rounded-2xl h-[240px] p-3 flex justify-center items-center">
-            <LineChart
-              width={450}
-              height={250}
-              series={[
-                {
-                  data: pData,
-                  label: "Hours Spent",
-                  color: "#317b74",
-                  area: false,
-                  showMark: true,
-                  lineWidth: 2,
-                  markSize: 5,
-                },
-              ]}
-              xAxis={[{ scaleType: "point", data: xLabels }]}
-              yAxis={[
-                {
-                  tickFormat: () => "",
-                  stroke: "none",
-                  disableTicks: true,
-                  disableAxisLine: true,
-                  position: "left",
-                  axisLabel: "",
-                },
-              ]}
-              slotProps={{
-                legend: {
-                  position: {
-                    vertical: "top",
-                    horizontal: "left",
-                  },
-                  padding: 0,
-                  labelStyle: {
-                    fontSize: 14,
-                  },
-                },
-              }}
-              sx={{
-                ".MuiChartsAxis-left .MuiChartsAxis-tickLabel": {
-                  display: "none",
-                },
-                ".MuiChartsAxis-left .MuiChartsAxis-line": {
-                  display: "none",
-                },
-              }}
-            />
+        
+        {/* Stat Cards Row */}
+        <div className="grid grid-cols-3 gap-4 mt-6">
+          {/* Enrolled Courses Card */}
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+            <div className="flex items-start space-x-3">
+              <div className="bg-green-100 p-2 rounded-lg">
+                <span className="text-green-600 text-2xl">📚</span>
+              </div>
+              <div>
+                <div className="text-2xl font-bold">32</div>
+                <div className="text-gray-500 text-sm">Enrolled courses</div>
+              </div>
+            </div>
+            <div className="mt-4 pt-2 border-t flex justify-between items-center">
+              <span className="text-blue-600 text-sm">View Details</span>
+              <span className="text-blue-600">→</span>
+            </div>
           </div>
-          <div className="w-[45%] border-gray-400 border-1 rounded-2xl h-[240px] p-3">
-            <h1 className="font-semibold text-2xl mb-[20px]">Lessons</h1>
-            <div className="bg-[#fef0f0] rounded-2xl px-[50px] ">
-              <div className="flex flex-row py-[10px] gap-4 justify-between items-center">
-                <div className="flex flex-col  leading-0.5">
-                  <span className="w-[30%] font-semibold text-xl ">34</span>{" "}
-                  <span className="font-normal text-sm">Quizzes</span>
-                </div>
+          
+          {/* Quizzes Card */}
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+            <div className="flex items-start space-x-3">
+              <div className="bg-yellow-100 p-2 rounded-lg">
+                <span className="text-yellow-600 text-2xl">📝</span>
+              </div>
+              <div>
+                <div className="text-2xl font-bold">34</div>
+                <div className="text-gray-500 text-sm">Quizzes</div>
+              </div>
+            </div>
+            <div className="mt-4 pt-2 border-t flex justify-between items-center">
+              <span className="text-blue-600 text-sm">View Details</span>
+              <span className="text-blue-600">→</span>
+            </div>
+          </div>
+          
+          {/* Completed Roadmaps Card */}
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+            <div className="flex items-start space-x-3">
+              <div className="bg-green-100 p-2 rounded-lg">
+                <span className="text-green-600 text-2xl">🗺️</span>
+              </div>
+              <div>
+                <div className="text-2xl font-bold">2</div>
+                <div className="text-gray-500 text-sm">Completed roadmaps</div>
+              </div>
+            </div>
+            <div className="mt-4 pt-2 border-t flex justify-between items-center">
+              <span className="text-blue-600 text-sm">View Details</span>
+              <span className="text-blue-600">→</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Charts Row */}
+        <div className="grid grid-cols-2 gap-4 mt-6">
+          {/* Hours Spent Chart */}
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+            <div className="flex justify-between items-center mb-2">
+              <div>
+                <div className="text-xl font-semibold">30</div>
+                <div className="text-gray-500 text-sm">Hours Spent</div>
+              </div>
+              <select className="text-sm border rounded p-1 bg-gray-50">
+                <option>This week</option>
+              </select>
+            </div>
+            <div className="h-48">
+              <LineChart
+                width={400}
+                height={200}
+                series={[
+                  {
+                    data: hoursData,
+                    label: "",
+                    color: "#2e7d32", // Dark green for line
+                    area: false,
+                    showMark: true,
+                    lineWidth: 2,
+                    markSize: 5,
+                  },
+                ]}
+                xAxis={[{ scaleType: "point", data: daysLabels }]}
+                yAxis={[
+                  {
+                    tickFormat: () => "",
+                    stroke: "none",
+                    disableTicks: true,
+                    disableAxisLine: true,
+                    position: "left",
+                    axisLabel: "",
+                  },
+                ]}
+                sx={{
+                  ".MuiChartsAxis-left .MuiChartsAxis-tickLabel": {
+                    display: "none",
+                  },
+                  ".MuiChartsAxis-left .MuiChartsAxis-line": {
+                    display: "none",
+                  },
+                }}
+              />
+            </div>
+          </div>
+          
+          {/* Lessons Chart */}
+          <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="font-semibold text-lg">Lessons</h3>
+              <select className="text-sm border rounded p-1 bg-gray-50">
+                <option>This week</option>
+              </select>
+            </div>
+            
+            <div className="bg-red-50 rounded-xl p-4">
+              {/* Quizzes Bar Chart */}
+              <div className="flex justify-between items-center mb-4">
                 <div>
-                  {" "}
+                  <div className="font-semibold text-lg">34</div>
+                  <div className="text-gray-500 text-sm">Quizzes</div>
+                </div>
+                <div style={{ width: "120px", height: "60px" }}>
                   <BarChart
-                    width={100}
+                    width={120}
                     height={60}
                     series={[
                       {
                         data: quizData,
-                        color: "#ff6b6b",
+                        color: "#1976d2", // Blue bars
                         barWidth: 0.4,
                       },
                     ]}
@@ -218,11 +165,6 @@ const MainDashboard = () => {
                       {
                         data: [1, 2, 3, 4, 5, 6, 7],
                         scaleType: "band",
-                        position: "bottom",
-                        tickSize: 0,
-                        ticksVisible: false,
-                        axisBorder: { stroke: "transparent" },
-                        labelStyle: { display: "none" },
                         disableTicks: true,
                         disableAxisLine: true,
                         disableGridLines: true,
@@ -230,12 +172,6 @@ const MainDashboard = () => {
                     ]}
                     yAxis={[
                       {
-                        scaleType: "linear",
-                        position: "left",
-                        tickSize: 0,
-                        ticksVisible: false,
-                        axisBorder: { stroke: "transparent" },
-                        labelStyle: { display: "none" },
                         disableTicks: true,
                         disableAxisLine: true,
                         disableGridLines: true,
@@ -248,20 +184,21 @@ const MainDashboard = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-row py-[10px] gap-4 justify-between items-center">
-                <div className="flex flex-col  leading-0.5">
-                  <span className="w-[30%] font-semibold text-xl ">78.3%</span>{" "}
-                  <span className="font-normal text-sm">Answers</span>
-                </div>
+              
+              {/* Answers Bar Chart */}
+              <div className="flex justify-between items-center">
                 <div>
-                  {" "}
+                  <div className="font-semibold text-lg">78.3%</div>
+                  <div className="text-gray-500 text-sm">Answers</div>
+                </div>
+                <div style={{ width: "120px", height: "60px" }}>
                   <BarChart
-                    width={100}
+                    width={120}
                     height={60}
                     series={[
                       {
                         data: answerData,
-                        color: "#317b74",
+                        color: "#ff8f00", // Orange bars
                         barWidth: 0.4,
                       },
                     ]}
@@ -269,11 +206,6 @@ const MainDashboard = () => {
                       {
                         data: [1, 2, 3, 4, 5, 6, 7],
                         scaleType: "band",
-                        position: "bottom",
-                        tickSize: 0,
-                        ticksVisible: false,
-                        axisBorder: { stroke: "transparent" },
-                        labelStyle: { display: "none" },
                         disableTicks: true,
                         disableAxisLine: true,
                         disableGridLines: true,
@@ -281,12 +213,6 @@ const MainDashboard = () => {
                     ]}
                     yAxis={[
                       {
-                        scaleType: "linear",
-                        position: "left",
-                        tickSize: 0,
-                        ticksVisible: false,
-                        axisBorder: { stroke: "transparent" },
-                        labelStyle: { display: "none" },
                         disableTicks: true,
                         disableAxisLine: true,
                         disableGridLines: true,
@@ -302,85 +228,104 @@ const MainDashboard = () => {
             </div>
           </div>
         </div>
-      </div>
-      <br />
-      <div>
-        <div className="flex gap-[20px] flex-wrap justify-center items-center content-center">
-          <div className="w-[92%] border-gray-400 border-1 rounded-2xl h-auto p-3">
-            <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
-              <div className="flex justify-between items-center">
-                <h2 className="text-xl font-semibold">Continue Learning</h2>
-                <div className="flex space-x-2">
+        
+        {/* Continue Learning Section */}
+        <div className="mt-6">
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="font-semibold text-lg">Continue Learning</h2>
+              <div className="flex space-x-2">
+                <div className="relative">
                   <input
                     type="text"
                     placeholder="Search your courses..."
-                    className="border rounded px-3 py-1"
+                    className="border border-gray-300 rounded-lg pl-3 pr-8 py-1 text-sm"
                   />
-                  <button className="bg-gray-200 px-3 py-1 rounded">
-                    See All
-                  </button>
+                  <span className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
+                    🔍
+                  </span>
+                </div>
+                <button className="bg-blue-50 text-blue-600 px-3 py-1 rounded-lg text-sm">
+                  See All
+                </button>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-3 text-gray-500 font-medium text-sm px-4 pb-2">
+              <div>Course Name</div>
+              <div>Progress</div>
+              <div className="text-right">Status</div>
+            </div>
+            
+            {/* Course 1 */}
+            <div className="bg-gray-50 p-4 rounded-lg mb-3 flex items-center">
+              <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-red-600 font-bold text-xs">LA</span>
+              </div>
+              <div className="flex-1">
+                <div className="font-medium">Linear Algebra</div>
+                <div className="text-gray-500 text-xs">5 hours • Advanced</div>
+              </div>
+              <div className="w-1/3">
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full w-2/5"></div>
                 </div>
               </div>
-
-              <div className="mt-4">
-                <div className="grid grid-cols-3 text-gray-600 font-semibold text-sm pb-2">
-                  <div>Course Name</div>
-                  <div>Progress</div>
-                  <div className="text-right">Status</div>
+              <div className="w-1/4 text-right flex justify-end items-center space-x-2">
+                <span className="bg-gray-200 text-gray-600 px-2 py-1 rounded-lg text-xs">
+                  In progress
+                </span>
+                <span className="text-blue-600">›</span>
+              </div>
+            </div>
+            
+            {/* Course 2 */}
+            <div className="bg-gray-50 p-4 rounded-lg mb-3 flex items-center">
+              <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-green-600 font-bold text-xs">DA</span>
+              </div>
+              <div className="flex-1">
+                <div className="font-medium">Designing Algorithms</div>
+                <div className="text-gray-500 text-xs">16 hours • Advanced</div>
+              </div>
+              <div className="w-1/3">
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full w-3/5"></div>
                 </div>
-
-                {/* Course 1 */}
-                <div className="bg-gray-50 p-4 rounded-lg shadow flex items-center space-x-4 mb-3">
-                  <div className="flex-1">
-                    <p className="font-semibold">Linear Algebra</p>
-                    <p className="text-sm text-gray-500">5 hours • Advanced</p>
-                    <div className="mt-2 w-full bg-gray-200 h-2 rounded">
-                      <div className="bg-green-600 h-2 rounded w-2/5"></div>
-                    </div>
-                  </div>
-                  <span className="bg-gray-200 px-3 py-1 text-sm rounded flex items-center">
-                    ⏳ In progress
-                  </span>
-                  <span className="text-gray-400 text-xl">&gt;</span>
+              </div>
+              <div className="w-1/4 text-right flex justify-end items-center space-x-2">
+                <span className="bg-gray-200 text-gray-600 px-2 py-1 rounded-lg text-xs">
+                  In progress
+                </span>
+                <span className="text-blue-600">›</span>
+              </div>
+            </div>
+            
+            {/* Course 3 */}
+            <div className="bg-gray-50 p-4 rounded-lg flex items-center">
+              <div className="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-teal-600 font-bold text-xs">BC</span>
+              </div>
+              <div className="flex-1">
+                <div className="font-medium">Blockchain</div>
+                <div className="text-gray-500 text-xs">9 hours • Intermediate</div>
+              </div>
+              <div className="w-1/3">
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full w-full"></div>
                 </div>
-
-                {/* Course 2 */}
-                <div className="bg-gray-50 p-4 rounded-lg shadow flex items-center space-x-4 mb-3">
-                  <div className="flex-1">
-                    <p className="font-semibold">Designing Algorithms</p>
-                    <p className="text-sm text-gray-500">16 hours • Advanced</p>
-                    <div className="mt-2 w-full bg-gray-200 h-2 rounded">
-                      <div className="bg-green-500 h-2 rounded w-3/5"></div>
-                    </div>
-                  </div>
-                  <span className="bg-gray-200 px-3 py-1 text-sm rounded flex items-center">
-                    ⏳ In progress
-                  </span>
-                  <span className="text-gray-400 text-xl">&gt;</span>
-                </div>
-
-                {/* Course 3 */}
-                <div className="bg-gray-50 p-4 rounded-lg shadow flex items-center space-x-4">
-                  <div className="flex-1">
-                    <p className="font-semibold">Blockchain</p>
-                    <p className="text-sm text-gray-500">
-                      9 hours • Intermediate
-                    </p>
-                    <div className="mt-2 w-full bg-gray-200 h-2 rounded">
-                      <div className="bg-green-700 h-2 rounded w-full"></div>
-                    </div>
-                  </div>
-                  <span className="bg-black text-white px-3 py-1 text-sm rounded flex items-center">
-                    ✔ Completed
-                  </span>
-                  <span className="text-gray-400 text-xl">&gt;</span>
-                </div>
+              </div>
+              <div className="w-1/4 text-right flex justify-end items-center space-x-2">
+                <span className="bg-green-500 text-white px-2 py-1 rounded-lg text-xs">
+                  Completed
+                </span>
+                <span className="text-blue-600">›</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

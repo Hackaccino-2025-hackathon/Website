@@ -10,8 +10,9 @@ const Join = () => {
       <div className="subscribe-content">
         <h1>Join with us & <br /> grow your <span>Personal Skills</span></h1>
         <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-          Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.
+          Learn smarter skills with zero effort using tools built for your pace.
+          Video-led guidance flows easy through your learning path.
+          Progress feels automatic.
         </p>
         <div className="subscribe-input">
           <input type="email" placeholder="Enter Your Mail" />

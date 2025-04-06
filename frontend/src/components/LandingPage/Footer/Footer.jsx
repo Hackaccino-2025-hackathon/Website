@@ -26,18 +26,19 @@ const Footer = () => {
         <div className="footer-section links">
           <h3>Learning Paths</h3>
           <ul>
-            <li>Health & Fitness</li>
-            <li>Business Coaching</li>
-            <li>Leadership Skills</li>
-            <li>Programming & Tech</li>
+            <li>AI-Powered Learning Paths</li>
+            <li>Career-Ready Skill Tracks</li>
+            <li>Smart Leadership Modules</li>
+            <li>Auto-Guided Tech Courses</li>
           </ul>
+
         </div>
 
         <div className="footer-section contact">
           <h3>Get in Touch</h3>
           <div className="contact-info">
-            <p><span className="contact-icon">📞</span> (316) 555-0116</p>
-            <p><span className="contact-icon">✉️</span> <a href="mailto:contact@learnify.com">contact@learnify.com</a></p>
+            <p><span className="contact-icon">📞</span> +(91)8591513828</p>
+            <p><span className="contact-icon">✉️</span> <a href="hackhaccino@gmail.com">contact@learnify.com</a></p>
           </div>
           <div className="social-icons">
             <div className="icon">f</div>

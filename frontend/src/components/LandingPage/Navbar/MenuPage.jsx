@@ -98,9 +98,9 @@ const MenuPage = () => {
         animate="visible"
       >
         <motion.h1 variants={navItemVariants}>ABOUT</motion.h1>
-        <motion.h1 variants={navItemVariants}>PROJECTS</motion.h1>
-        <motion.h1 variants={navItemVariants}>PODCAST</motion.h1>
-        <motion.h1 variants={navItemVariants}>BLOG</motion.h1>
+        <motion.h1 variants={navItemVariants}>COURSES</motion.h1>
+        <motion.h1 variants={navItemVariants}>FEATURES</motion.h1>
+        <motion.h1 variants={navItemVariants}>ROADMAPS</motion.h1>
         <motion.button variants={navItemVariants} className="contact-button">
           CONTACT
         </motion.button>

@@ -84,9 +84,10 @@ export default function Features() {
                 Make the most of your time for your enhancement
               </h2>
               <p className="feature-one-paragraph">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                veniam consequat.
+                Calm, focused learning shaped around your unique rhythm.
+                Intelligent support grows with every curious step you take.
+                Creation becomes effortless.
+
               </p>
             </div>
           </div>
@@ -153,7 +154,7 @@ export default function Features() {
                 height: 'auto'
               }}
             >
-              <div className="feature-circle-bg" style={{backgroundColor:'lightgreen'}} />
+              <div className="feature-circle-bg" style={{ backgroundColor: 'lightgreen' }} />
               <div className="feature-box-bg" />
               <img
                 ref={imgRef2}
@@ -173,14 +174,14 @@ export default function Features() {
               className="feature-one-text"
               style={{ marginRight: '-55px', paddingBottom: '20px' }}
             >
-              <span className="feature-one-label" style={{backgroundColor:'#FF9E4F',marginLeft:'180px',fontSize:'20px'}}>Our Features</span>
-              <h2 className="feature-one-heading" style={{marginLeft:'180px', fontSize:'35px'}}>
+              <span className="feature-one-label" style={{ backgroundColor: '#FF9E4F', marginLeft: '180px', fontSize: '20px' }}>Our Features</span>
+              <h2 className="feature-one-heading" style={{ marginLeft: '180px', fontSize: '35px' }}>
                 Enhance your life with our latest tools
               </h2>
-              <p className="feature-one-paragraph" style={{marginLeft:'180px'}}>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                veniam consequat.
+              <p className="feature-one-paragraph" style={{ marginLeft: '180px' }}>
+                Aware, mindful progress built within your own pace and space.
+                Smart guidance flows through tools that know your style.
+                Exploration feels empowering.
               </p>
             </div>
           </div>

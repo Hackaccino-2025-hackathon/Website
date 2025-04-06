@@ -4,23 +4,23 @@ import "./Review.css";
 const reviews = [
   {
     quote: "The instructors brought so much passion and empathy into creating this. Also, it could be done asynchronously which was important to me as a mom.",
-    name: "Leslie Alexander",
-    location: "4140 Parker Rd. Allentown, New Mexico 31134",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Priya Sharma",
+    location: "MG Road, Bengaluru, Karnataka",
+    image: "https://randomuser.me/api/portraits/women/1.jpg",
     color: "#fda94f"
   },
   {
     quote: "This course gave me the flexibility I needed. It fits perfectly with my schedule!",
-    name: "Mark Johnson",
-    location: "123 Cedar St. Springfield, Illinois",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Rajesh Iyer",
+    location: "Gopalapuram, Chennai, Tamil Nadu",
+    image: "https://randomuser.me/api/portraits/men/30.jpg",
     color: "#8da3fd"
   },
   {
     quote: "I loved the asynchronous format, and the support from instructors was amazing.",
-    name: "Emily Clark",
-    location: "88 Bay Area, San Francisco, CA",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Ananya Mehta",
+    location: "Sector 62, Noida, Uttar Pradesh",
+    image: "https://randomuser.me/api/portraits/women/10.jpg",
     color: "#d285fd"
   }
 ];
