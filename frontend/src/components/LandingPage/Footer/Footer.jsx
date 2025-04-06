@@ -6,34 +6,39 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-section brand">
-          <h2><span className="highlight">L</span>earning</h2>
+          <h2><span className="highlight">L</span>earnify</h2>
           <p>
-            Build your network, share skills, and open up on the Learning
-            platform where you can be your whole self Forward Arrow
+            Build your network, share skills, and grow together on the Learnify
+            platform where you can be your whole self <span className="forward-arrow">→</span>
           </p>
         </div>
 
         <div className="footer-section links">
+          <h3>Quick Links</h3>
           <ul>
-            <li>About</li>
-            <li>Team & Career</li>
-            <li>Solutions</li>
-            <li>Contact</li>
+            <li>About Us</li>
+            <li>Team & Careers</li>
+            <li>Our Solutions</li>
+            <li>Contact Us</li>
           </ul>
         </div>
 
         <div className="footer-section links">
+          <h3>Learning Paths</h3>
           <ul>
             <li>Health & Fitness</li>
-            <li>Business Coach</li>
-            <li>Leadership</li>
-            <li>Programming</li>
+            <li>Business Coaching</li>
+            <li>Leadership Skills</li>
+            <li>Programming & Tech</li>
           </ul>
         </div>
 
         <div className="footer-section contact">
-          <p>(316) 555-0116</p>
-          <p><a href="mailto:contact@mail.com">contact@mail.com</a></p>
+          <h3>Get in Touch</h3>
+          <div className="contact-info">
+            <p><span className="contact-icon">📞</span> (316) 555-0116</p>
+            <p><span className="contact-icon">✉️</span> <a href="mailto:contact@learnify.com">contact@learnify.com</a></p>
+          </div>
           <div className="social-icons">
             <div className="icon">f</div>
             <div className="icon">t</div>
@@ -45,10 +50,10 @@ const Footer = () => {
       <hr />
 
       <div className="footer-bottom">
-        <p>Copyright © 2022 Musemind <span className="link">ui/ux design</span> agency | All rights reserved.</p>
+        <p className="copyright">Copyright © 2025 Learnify <span className="link">learning platform</span> | All rights reserved.</p>
         <div className="footer-policy">
           <span>Terms of Service</span>
-          <span>Privacy & Policy</span>
+          <span>Privacy Policy</span>
         </div>
       </div>
     </footer>

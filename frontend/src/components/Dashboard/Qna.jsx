@@ -76,120 +76,173 @@ const QnA = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#2C3E50] text-white py-12 px-4 md:px-10 space-y-12 font-[Poppins]">
-      
-      {/* Section 1: Upload Marking Scheme */}
-      <form onSubmit={handleUploadScheme} className="bg-white text-[#2C3E50] rounded-2xl shadow-lg p-8 space-y-4">
-        <h2 className="text-3xl font-bold text-[#2C3E50]">1. Upload Marking Scheme</h2>
-        <div className="flex flex-wrap gap-4 items-center">
-          <input
-            type="text"
-            value={questionNumber}
-            onChange={(e) => setQuestionNumber(e.target.value)}
-            placeholder="Question #"
-            className="border border-gray-300 rounded-xl px-4 py-2 w-32 focus:outline-none focus:ring-2 focus:ring-[#FFE08A]"
-            required
-          />
-          <input
-            type="file"
-            onChange={(e) => setMarkingSchemeFile(e.target.files[0])}
-            className="bg-[#FFE08A] text-[#2C3E50] px-3 py-2 rounded-xl cursor-pointer"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-[#FFE08A] hover:bg-yellow-300 text-[#2C3E50] font-semibold px-6 py-2 rounded-xl transition-all duration-300 shadow-md"
-          >
-            Upload Scheme
-          </button>
-        </div>
-        {uploadMessage && <p className="text-green-700 font-medium">{uploadMessage}</p>}
-      </form>
-
-      {/* Section 2: Submit Answer & Grade */}
-      <form onSubmit={handleSubmitAnswer} className="bg-white text-[#2C3E50] rounded-2xl shadow-lg p-8 space-y-6">
-        <h2 className="text-3xl font-bold text-[#2C3E50]">2. Submit Answer & Grade</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <input
-            type="text"
-            value={studentName}
-            onChange={(e) => setStudentName(e.target.value)}
-            placeholder="Student Name"
-            className="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFE08A]"
-            required
-          />
-          <input
-            type="text"
-            value={studentId}
-            onChange={(e) => setStudentId(e.target.value)}
-            placeholder="Student ID"
-            className="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFE08A]"
-            required
-          />
-          <input
-            type="text"
-            value={questionNumber}
-            onChange={(e) => setQuestionNumber(e.target.value)}
-            placeholder="Question #"
-            className="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFE08A]"
-            required
-          />
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 py-12 px-4 md:px-10 space-y-10 font-sans">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-800">
+          Automated <span className="text-orange-500">Grading</span> System
+        </h1>
+        
+        {/* Section 1: Upload Marking Scheme */}
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+          <div className="bg-gradient-to-r from-orange-400 to-orange-500 py-4 px-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">1. Upload Marking Scheme</h2>
+          </div>
+          
+          <form onSubmit={handleUploadScheme} className="p-8 space-y-6">
+            <div className="flex flex-wrap gap-4 items-center">
+              <div className="relative">
+                <input
+                  type="text"
+                  value={questionNumber}
+                  onChange={(e) => setQuestionNumber(e.target.value)}
+                  placeholder="Question #"
+                  className="border border-gray-300 rounded-xl px-4 py-3 w-32 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200"
+                  required
+                />
+              </div>
+              
+              <div className="relative flex-grow md:flex-grow-0">
+                <label className="block mb-2 text-sm font-medium text-gray-700">Marking Scheme File</label>
+                <input
+                  type="file"
+                  onChange={(e) => setMarkingSchemeFile(e.target.files[0])}
+                  className="block w-full text-gray-700 bg-orange-50 border border-orange-200 rounded-xl cursor-pointer focus:outline-none py-2 px-3"
+                  required
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg ml-auto mt-4 md:mt-0"
+              >
+                Upload Scheme
+              </button>
+            </div>
+            
+            {uploadMessage && (
+              <div className={`mt-4 p-3 rounded-lg ${uploadMessage.includes('✅') ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                {uploadMessage}
+              </div>
+            )}
+          </form>
         </div>
 
-        <div>
-          <label className="block text-sm font-semibold text-[#2C3E50] mb-1">Upload Answer File</label>
-          <input
-            type="file"
-            onChange={(e) => setStudentAnswerFile(e.target.files[0])}
-            className="bg-[#FFE08A] text-[#2C3E50] px-3 py-2 rounded-xl cursor-pointer"
-            required
-          />
+        {/* Section 2: Submit Answer & Grade */}
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl mt-10">
+          <div className="bg-gradient-to-r from-orange-400 to-orange-500 py-4 px-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">2. Submit Answer & Grade</h2>
+          </div>
+          
+          <form onSubmit={handleSubmitAnswer} className="p-8 space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <label className="block mb-2 text-sm font-medium text-gray-700">Student Name</label>
+                <input
+                  type="text"
+                  value={studentName}
+                  onChange={(e) => setStudentName(e.target.value)}
+                  placeholder="Enter full name"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block mb-2 text-sm font-medium text-gray-700">Student ID</label>
+                <input
+                  type="text"
+                  value={studentId}
+                  onChange={(e) => setStudentId(e.target.value)}
+                  placeholder="Enter student ID"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block mb-2 text-sm font-medium text-gray-700">Question Number</label>
+                <input
+                  type="text"
+                  value={questionNumber}
+                  onChange={(e) => setQuestionNumber(e.target.value)}
+                  placeholder="Question #"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <label className="block mb-2 text-sm font-medium text-gray-700">Upload Answer File</label>
+              <input
+                type="file"
+                onChange={(e) => setStudentAnswerFile(e.target.files[0])}
+                className="block w-full text-gray-700 bg-orange-50 border border-orange-200 rounded-xl cursor-pointer focus:outline-none py-2 px-3"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg mt-6"
+            >
+              Submit & Grade
+            </button>
+
+            {answerMessage && (
+              <div className={`mt-4 p-4 rounded-lg ${answerMessage.includes('✅') ? 'bg-green-50 text-green-700' : answerMessage.includes('⏳') ? 'bg-blue-50 text-blue-700' : 'bg-red-50 text-red-700'}`}>
+                {answerMessage}
+              </div>
+            )}
+          </form>
         </div>
 
-        <button
-          type="submit"
-          className="w-full bg-[#FFE08A] hover:bg-yellow-300 text-[#2C3E50] font-semibold py-3 rounded-xl transition-all duration-300 shadow-md"
-        >
-          Submit & Grade
-        </button>
+        {/* Grading Message */}
+        {gradingMessage && (
+          <div className="text-2xl font-semibold text-orange-500 text-center mt-10 bg-white p-6 rounded-3xl shadow-lg">
+            {gradingMessage}
+          </div>
+        )}
 
-        {answerMessage && <p className="text-green-700 font-medium mt-3">{answerMessage}</p>}
-      </form>
-
-      {/* Grading Message */}
-      {gradingMessage && (
-        <div className="text-xl font-semibold text-[#FFE08A] text-center">
-          {gradingMessage}
-        </div>
-      )}
-
-      {/* Results Table */}
-      {gradingResults.length > 0 && (
-        <div className="bg-white text-[#2C3E50] rounded-2xl shadow-lg p-6 overflow-x-auto">
-          <h2 className="text-2xl font-bold mb-4">📊 Grading Results</h2>
-          <table className="table-auto w-full border-collapse">
-            <thead className="bg-[#FFE08A] text-[#2C3E50]">
-              <tr>
-                <th className="px-4 py-2 text-left">Student Name</th>
-                <th className="px-4 py-2 text-left">Student ID</th>
-                <th className="px-4 py-2 text-left">Question #</th>
-                <th className="px-4 py-2 text-left">Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {gradingResults.map((row, idx) => (
-                <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-4 py-2 border-t">{row.student_name}</td>
-                  <td className="px-4 py-2 border-t">{row.student_id}</td>
-                  <td className="px-4 py-2 border-t">{row.question_number}</td>
-                  <td className="px-4 py-2 border-t">{row.score}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+        {/* Results Table */}
+        {gradingResults.length > 0 && (
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden mt-10">
+            <div className="bg-gradient-to-r from-orange-400 to-orange-500 py-4 px-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-white">📊 Grading Results</h2>
+            </div>
+            
+            <div className="p-6 overflow-x-auto">
+              <table className="table-auto w-full border-collapse">
+                <thead>
+                  <tr className="bg-orange-100 text-orange-800">
+                    <th className="px-6 py-4 text-left font-semibold rounded-tl-xl">Student Name</th>
+                    <th className="px-6 py-4 text-left font-semibold">Student ID</th>
+                    <th className="px-6 py-4 text-left font-semibold">Question #</th>
+                    <th className="px-6 py-4 text-left font-semibold rounded-tr-xl">Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {gradingResults.map((row, idx) => (
+                    <tr 
+                      key={idx} 
+                      className={`border-b border-orange-100 hover:bg-orange-50 transition-colors duration-150 ${idx === gradingResults.length - 1 ? 'border-none' : ''}`}
+                    >
+                      <td className="px-6 py-4">{row.student_name}</td>
+                      <td className="px-6 py-4">{row.student_id}</td>
+                      <td className="px-6 py-4">{row.question_number}</td>
+                      <td className="px-6 py-4 font-medium text-orange-600">{row.score}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            
+            <div className="bg-orange-50 p-4 text-center text-orange-800">
+              <p className="font-medium">Learn, Share and Grow Together!</p>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -176,7 +176,7 @@ const Dashboard = () => {
       case "chatbot":
         return <div>Chatbot Component</div>;
       case "qa":
-        return <QnA />
+        return <QnA />;
       default:
         return <MainDashboard />;
     }
