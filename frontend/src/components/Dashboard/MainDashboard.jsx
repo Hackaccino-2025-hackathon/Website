@@ -38,7 +38,7 @@ const MainDashboard = () => {
                 <span className="text-green-600 text-2xl">📚</span>
               </div>
               <div>
-                <div className="text-2xl font-bold">32</div>
+                <div className="text-2xl font-bold">4</div>
                 <div className="text-gray-500 text-sm">Enrolled courses</div>
               </div>
             </div>
@@ -55,7 +55,7 @@ const MainDashboard = () => {
                 <span className="text-yellow-600 text-2xl">📝</span>
               </div>
               <div>
-                <div className="text-2xl font-bold">34</div>
+                <div className="text-2xl font-bold">10</div>
                 <div className="text-gray-500 text-sm">Quizzes</div>
               </div>
             </div>

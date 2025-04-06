@@ -1,13 +1,13 @@
 {
-  "timestamp": "2025-04-05T22:57:58.291Z",
+  "timestamp": "2025-04-06T08:35:30.515Z",
   "questions": [
     {
-      "questionText": "What is the purpose of the `uint256` keyword in Solidity?",
+      "questionText": "What is the purpose of the `uint256` type in Solidity?",
       "options": [
-        "To define a signed integer variable.",
-        "To define an unsigned 256-bit integer variable.",
-        "To define a string variable.",
-        "To define a boolean variable."
+        "To store signed integers up to 256 bits",
+        "To store unsigned integers up to 256 bits",
+        "To store floating-point numbers",
+        "To store strings"
       ],
       "correctAnswer": 1,
       "userAnswer": 2,
@@ -22,35 +22,35 @@
         "Mapping"
       ],
       "correctAnswer": 3,
-      "userAnswer": 1,
+      "userAnswer": 2,
       "isCorrect": false
     },
     {
       "questionText": "What is the purpose of the `onlyOwner` modifier?",
       "options": [
-        "To allow any user to call a function.",
-        "To restrict a function's execution to the contract's owner.",
-        "To specify the return type of a function.",
-        "To define the parameters of a function."
+        "To allow only the contract creator to call a function",
+        "To restrict access to a function based on time",
+        "To make a function payable",
+        "To emit an event"
+      ],
+      "correctAnswer": 0,
+      "userAnswer": 2,
+      "isCorrect": false
+    },
+    {
+      "questionText": "How can a contract receive Ether?",
+      "options": [
+        "By using the `receive` function",
+        "By using the `payable` modifier on a function",
+        "By using the `transfer` function",
+        "By emitting an event"
       ],
       "correctAnswer": 1,
       "userAnswer": 2,
       "isCorrect": false
     },
     {
-      "questionText": "How can a smart contract receive Ether?",
-      "options": [
-        "By using the `receive` function.",
-        "By using the `payable` modifier on a function.",
-        "By using the `transfer` function.",
-        "By using the `send` function."
-      ],
-      "correctAnswer": 1,
-      "userAnswer": 1,
-      "isCorrect": true
-    },
-    {
-      "questionText": "What keyword is used to create a new contract that inherits properties and functions from an existing contract?",
+      "questionText": "What keyword is used to inherit properties and functions from another contract?",
       "options": [
         "extends",
         "inherits",
@@ -58,8 +58,8 @@
         "using"
       ],
       "correctAnswer": 2,
-      "userAnswer": 1,
-      "isCorrect": false
+      "userAnswer": 2,
+      "isCorrect": true
     }
   ],
   "score": 0

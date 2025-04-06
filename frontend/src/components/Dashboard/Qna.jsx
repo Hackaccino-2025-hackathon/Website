@@ -76,7 +76,7 @@ const QnA = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#2C3E50] text-white py-12 px-4 md:px-10 space-y-12 font-[Poppins]">
+    <div className="min-h-screen bg-[#fffff] text-white py-12 px-4 md:px-10 space-y-12 font-[Poppins]">
       
       {/* Section 1: Upload Marking Scheme */}
       <form onSubmit={handleUploadScheme} className="bg-white text-[#2C3E50] rounded-2xl shadow-lg p-8 space-y-4">

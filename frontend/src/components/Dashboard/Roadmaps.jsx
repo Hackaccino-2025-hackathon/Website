@@ -124,10 +124,10 @@ const Roadmaps = () => {
           </div>
           <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[200px] p-3 ">
             <h3 className="font-bold mb-[20px]">
-              Deep Learning and architecture
+              5G network
             </h3>
             <h1 className="text-2xl font-normal ">
-              Ch-6.2 Sigmoid Function and its uses{" "}
+              Ch-1.2 introduction to 5G network {" "}
             </h1>
             <span className="text-sm text-gray-700 mb-[20px]">240 minutes</span>
             <div className="flex flex-row w-full justify-end mt-[15px]">
@@ -165,10 +165,10 @@ const Roadmaps = () => {
           </div>
           <div className="w-[31%] border-gray-400 border-1 rounded-2xl h-[200px] p-3 ">
             <h3 className="font-bold mb-[20px]">
-              Deep Learning and architecture
+              Solidity
             </h3>
             <h1 className="text-2xl font-normal ">
-              Ch-6.2 Sigmoid Function and its uses{" "}
+              Ch-1.2 First Solidity Contract{" "}
             </h1>
             <span className="text-sm text-gray-700 mb-[20px]">240 minutes</span>
             <div className="flex flex-row w-full justify-end mt-[15px]">

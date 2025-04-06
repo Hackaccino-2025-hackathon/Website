@@ -19,7 +19,7 @@ const Dashboard = () => {
         return <div>Quiz Component</div>;
       case "chatbot":
         return <div>Chatbot Component</div>;
-      case "qa":
+      case "grading":
         return <QnA />;
       default:
         return <MainDashboard />;

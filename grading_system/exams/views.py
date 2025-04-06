@@ -440,61 +440,62 @@ def grade_answer(student_text, marking_scheme_text):
 #     except Exception as e:
 #         logging.exception(f"🚨 Unexpected error: {e}")
 #         return Response({"error": "Grading failed", "details": str(e)}, status=500)
-# @api_view(["POST"])
-# def start_grading(request):
-#     try:
-#         # 🔴 DELETE previous grading results before starting fresh
-#         StudentAnswer.objects.update(score=None)  # Reset all scores
+@api_view(["POST"])
+def start_grading(request):
+    try:
+        # 🔴 DELETE previous grading results before starting fresh
+        StudentAnswer.objects.update(score=None)  # Reset all scores
         
-#         student_answers = StudentAnswer.objects.all()
+        student_answers = StudentAnswer.objects.all()
 
-#         if not student_answers.exists():
-#             logging.warning("❌ No student answers found.")
-#             return Response({"message": "No student answers found."}, status=404)
+        if not student_answers.exists():
+            logging.warning("❌ No student answers found.")
+            return Response({"message": "No student answers found."}, status=404)
 
-#         graded_answers = []  # Store grading results
+        graded_answers = []  # Store grading results
 
-#         with transaction.atomic():  # Ensure safe DB transactions
-#             for student_answer in student_answers:
-#                 try:
-#                     print(f"📌 Processing: {student_answer.student_name} (Q{student_answer.question_number})")
+        with transaction.atomic():  # Ensure safe DB transactions
+            for student_answer in student_answers:
+                try:
+                    print(f"📌 Processing: {student_answer.student_name} (Q{student_answer.question_number})")
 
-#                     marking_scheme = MarkingScheme.objects.filter(question_number=student_answer.question_number).first()
+                    marking_scheme = MarkingScheme.objects.filter(question_number=student_answer.question_number).first()
                     
-#                     if not marking_scheme:
-#                         logging.warning(f"⚠️ No MarkingScheme found for Q{student_answer.question_number}")
-#                         continue  # Skip to next answer
+                    if not marking_scheme:
+                        logging.warning(f"⚠️ No MarkingScheme found for Q{student_answer.question_number}")
+                        continue  # Skip to next answer
 
-#                     print(f"✅ Marking Scheme found for Q{student_answer.question_number}")
+                    print(f"✅ Marking Scheme found for Q{student_answer.question_number}")
 
-#                     # 🟢 Calculate Score (Now `grade_answer()` ensures the score is between 0-100)
-#                     score = grade_answer(student_answer.extracted_text, marking_scheme.extracted_text)
+                    # 🟢 Calculate Score (Now `grade_answer()` ensures the score is between 0-100)
+                    score = grade_answer(student_answer.extracted_text, marking_scheme.extracted_text)
 
-#                     # Save score
-#                     student_answer.score = score
-#                     student_answer.save()
+                    score = max(0, score)
+                    # Save score
+                    student_answer.score = score
+                    student_answer.save()
 
-#                     # Store graded result
-#                     graded_answers.append({
-#                         "student_name": student_answer.student_name,
-#                         "student_id": student_answer.student_id,
-#                         "question_number": student_answer.question_number,
-#                         "score": score
-#                     })
+                    # Store graded result
+                    graded_answers.append({
+                        "student_name": student_answer.student_name,
+                        "student_id": student_answer.student_id,
+                        "question_number": student_answer.question_number,
+                        "score": score
+                    })
 
-#                     print(f"🎯 Graded: {student_answer.student_name} (Q{student_answer.question_number}) -> Score: {score}")
+                    print(f"🎯 Graded: {student_answer.student_name} (Q{student_answer.question_number}) -> Score: {score}")
 
-#                 except Exception as e:
-#                     logging.exception(f"❌ Error grading {student_answer.student_name} (Q{student_answer.question_number}): {e}")
+                except Exception as e:
+                    logging.exception(f"❌ Error grading {student_answer.student_name} (Q{student_answer.question_number}): {e}")
 
-#         return Response({
-#             "message": "Grading Completed",
-#             "graded_answers": graded_answers
-#         }, status=200)
+        return Response({
+            "message": "Grading Completed",
+            "graded_answers": graded_answers
+        }, status=200)
 
-#     except Exception as e:
-#         logging.exception(f"🚨 Unexpected error: {e}")
-#         return Response({"error": "Grading failed", "details": str(e)}, status=500)
+    except Exception as e:
+        logging.exception(f"🚨 Unexpected error: {e}")
+        return Response({"error": "Grading failed", "details": str(e)}, status=500)
 
 @api_view(["POST"])
 def upload_marking_scheme(request):
@@ -527,7 +528,7 @@ def upload_marking_scheme(request):
         os.unlink(temp_file_path)
 
         marking_scheme = MarkingScheme.objects.create(
-            question_number=question_number,  # Ensure field name matches the model
+            question=question_number,  # Ensure field name matches the model
             extracted_text=extracted_text,
             uploaded_file=file
         )

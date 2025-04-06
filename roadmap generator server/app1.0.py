@@ -112,7 +112,7 @@ def generate_course():
     course_name = data["course_name"]
 
     # === Set up file path ===
-    base_dir = r"C:\Users\Nikhi\Documents\Projects\Hackacinno 2025\Global Storage"
+    base_dir = r"C:\Users\Mohak Singh\Desktop\Desktop Main\Projects\Learnify_project\Global Storage"
     roadmap_dir = os.path.join(base_dir, "roadmaps")
     os.makedirs(roadmap_dir, exist_ok=True)
 
