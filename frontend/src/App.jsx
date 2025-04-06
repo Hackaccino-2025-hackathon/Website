@@ -7,7 +7,7 @@ import RoadmapDisplay from "./components/Dashboard/RoadmapDisplay.jsx";
 import HomePage from "./Homepage.jsx";
 import TopicContent from "./components/Dashboard/TopicContent.jsx";
 import QuizPage from "./components/Dashboard/QuizPage.jsx";
-
+import Qna from './components/Dashboard/Qna.jsx'
 function App() {
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="qna" element={<Qna />}/>
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/roadmapdisplay" element={<RoadmapDisplay />} />
