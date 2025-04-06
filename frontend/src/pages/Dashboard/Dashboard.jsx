@@ -158,6 +158,7 @@ import React, { useState } from "react";
 import MainDashboard from "../../components/Dashboard/MainDashboard";
 import Roadmaps from "../../components/Dashboard/Roadmaps";
 import Mycourses from "../../components/Dashboard/Mycourses";
+import QnA from "../../components/Dashboard/Qna";
 
 const Dashboard = () => {
   const [activeNav, setActiveNav] = useState("home");
@@ -175,7 +176,7 @@ const Dashboard = () => {
       case "chatbot":
         return <div>Chatbot Component</div>;
       case "qa":
-        return <div>Q&A Component</div>;
+        return <QnA />
       default:
         return <MainDashboard />;
     }
