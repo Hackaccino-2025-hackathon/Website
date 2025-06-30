@@ -488,7 +488,7 @@ app.post("/api/generate-quiz", async (req, res) => {
 
     // Initialize the API with the key
     const GEMINI_API_KEY =
-      process.env.GEMINI_API_KEY || "AIzaSyC1rHHfMvy6PKqBlDMesIo8qyN0y_GtMLE";
+      process.env.GEMINI_API_KEY || "";
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
     // Get the model - using the same version as in your summarization code
